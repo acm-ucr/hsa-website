@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`flex min-h-screen w-screen flex-col overflow-x-hidden bg-hsa-tan-100 ${openSans.className}`}
+        className={`flex min-h-screen w-screen flex-col overflow-x-hidden bg-hsa-tan-100 ${openSans.className} ${songMyung.className}`}
       >
         <ReactQueryClientProvider>
           <Navigation />
