@@ -4,11 +4,9 @@ const Footer = () => {
   return (
     <>
       <Border />
-      <div className="bg-hsa-gray-200">
-        Footer
-      </div>
+      <div className="bg-hsa-gray-200">Footer</div>
     </>
-  )
-}
+  );
+};
 
 export default Footer;

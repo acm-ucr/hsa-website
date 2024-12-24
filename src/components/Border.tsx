@@ -1,7 +1,5 @@
 const Border = () => {
-  return (
-    <div>Border</div>
-  )
-}
+  return <div>Border</div>;
+};
 
 export default Border;

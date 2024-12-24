@@ -16,8 +16,8 @@ module.exports = {
           "gray-100": "#EFEFEF",
           "gray-200": "#AFAFAF",
           "gray-300": "#424242",
-        }
-      }
+        },
+      },
     },
   },
   plugins: [],

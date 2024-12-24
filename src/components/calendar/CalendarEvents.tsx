@@ -1,7 +1,5 @@
 const CalendarEvents = () => {
-  return (
-    <div>Calendar</div>
-  )
-}
+  return <div>Calendar</div>;
+};
 
 export default CalendarEvents;

@@ -1,7 +1,5 @@
 const Banquet = () => {
-    return (
-      <div>Banquet</div>
-    )
-  }
-  
-  export default Banquet;
+  return <div>Banquet</div>;
+};
+
+export default Banquet;

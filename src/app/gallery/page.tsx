@@ -1,5 +1,5 @@
 import Photos from "@/components/gallery/Photos";
-import Header from "@/components/Header"
+import Header from "@/components/Header";
 
 const Page = () => {
   return (
@@ -7,7 +7,7 @@ const Page = () => {
       <Header />
       <Photos />
     </>
-  )
-}
+  );
+};
 
 export default Page;

@@ -1,6 +1,6 @@
 import CalendarEvents from "@/components/calendar/CalendarEvents";
 import EventCard from "@/components/calendar/EventCard";
-import Header from "@/components/Header"
+import Header from "@/components/Header";
 
 const Page = () => {
   return (
@@ -9,7 +9,7 @@ const Page = () => {
       <EventCard />
       <CalendarEvents />
     </>
-  )
-}
+  );
+};
 
 export default Page;

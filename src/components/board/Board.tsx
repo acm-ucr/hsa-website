@@ -1,7 +1,5 @@
 const Page = () => {
-  return (
-    <div>Board Members</div>
-  )
-}
+  return <div>Board Members</div>;
+};
 
 export default Page;

@@ -1,7 +1,5 @@
 const FriendshipGames = () => {
-  return (
-    <div>Friendship Games</div>
-  )
-}
+  return <div>Friendship Games</div>;
+};
 
 export default FriendshipGames;
