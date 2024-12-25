@@ -11,7 +11,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/design/MR9oPPU7MUB670zmwwZtgP/HSA-Club-Website?node-id=0-1&t=e70n7eiDeHHEoQAE-1)
+[HSA Website Figma Design File](https://www.figma.com/design/MR9oPPU7MUB670zmwwZtgP/HSA-Club-Website?node-id=0-1&t=e70n7eiDeHHEoQAE-1)
 
 ## Node.js
 
