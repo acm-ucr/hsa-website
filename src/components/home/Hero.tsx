@@ -1,5 +1,5 @@
-const Footer = () => {
+const Hero = () => {
   return <div>Hero Section</div>;
 };
 
-export default Footer;
+export default Hero;
