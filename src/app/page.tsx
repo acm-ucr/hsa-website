@@ -11,7 +11,7 @@ const Home = () => {
       <About />
       <Mission />
       <Do />
-      <Example text1="Adjust" text2="these" text3="Props" />
+      <Example text1="Some" text2="Props" text3="Here" text4="Props" />
     </div>
   );
 };
