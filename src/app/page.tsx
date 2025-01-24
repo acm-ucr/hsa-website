@@ -3,6 +3,7 @@ import About from "@/components/home/About";
 import Mission from "@/components/home/Mission";
 import Do from "@/components/home/Do";
 import Example from "../components/example";
+import Header from "@/components/Header";
 
 const Home = () => {
   return (
