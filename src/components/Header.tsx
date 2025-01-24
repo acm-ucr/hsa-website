@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hsa5 from "@/public/hsa5.svg";
+import hsa5 from "@/public/assets/hsa5.svg";
 
 type props = {
   title: string;
