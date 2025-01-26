@@ -18,6 +18,10 @@ module.exports = {
           "gray-300": "#424242",
         },
       },
+      fontFamily: {
+        songMyung: ["var(--song-myung-font)"],
+        openSans: ["var(--open-sans-font)"],
+      },
     },
   },
   plugins: [],
