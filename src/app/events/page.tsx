@@ -7,7 +7,11 @@ const Page = () => {
   return (
     <>
       <Header />
-      <FriendshipGames />
+      <FriendshipGames
+        title="Friendship Games"
+        location="SSC MPR 2"
+        description="Lorem ipsum."
+      />
       <Banquet />
       <HmongNewYear />
     </>
