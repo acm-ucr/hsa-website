@@ -1,8 +1,8 @@
 const Page = (props: {
   position: string;
   name: string;
-  image: {};
-  badge: {};
+  image: string;
+  badge: string;
 }) => {
   return (
     <div>
