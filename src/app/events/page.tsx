@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 const Page = () => {
   return (
     <>
-      <Header />
+      <Header title="Events" />
       <div className="grid grid-cols-3">
         <div className="col-start-2 mb-5">
           <FriendshipGames
