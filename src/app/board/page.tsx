@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Board from "@/components/board/Board";
 import hsa1 from "@/public/assets/hsa1.svg";
-import example from "@/public/assets/toasty.png";
+import example from "@/public/assets/toasty.webp";
 
 const Page = () => {
   return (
