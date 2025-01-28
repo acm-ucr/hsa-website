@@ -1,5 +1,5 @@
 import Image from "next/image";
-import border from "@/public/border.svg";
+import border from "@/public/assets/border.svg";
 
 const Do = () => {
   return (
