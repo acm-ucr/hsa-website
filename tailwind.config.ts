@@ -3,10 +3,6 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        song: ["var(--song-myung-font)"],
-        open: ["var(--open-sans-font)"],
-      },
       colors: {
         hsa: {
           "tan-100": "#FBF3F0",
