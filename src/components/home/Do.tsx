@@ -6,7 +6,9 @@ const Do = () => {
   return (
     <div className="bg-hsatan-100 w-full flex-row rounded-lg">
       <div className="ml-5 h-3/4 w-3/4 space-y-5 p-10">
-        <div className="font-songMyung text-6xl text-hsa-blue-100">What We Do</div>
+        <div className="font-songMyung text-6xl text-hsa-blue-100">
+          What We Do
+        </div>
         <div className="text-2x1 font-open-sans font-semibold text-hsa-gray-300">
           We are the Hmong Student Association (HSA) at the University of
           California, Riverside (UCR), and we need your support! As an
