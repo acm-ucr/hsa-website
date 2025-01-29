@@ -16,7 +16,7 @@ const Navigation = () => {
         </div>
         <ul className="ml-60 flex items-center space-x-36 text-4xl">
           <li className="hover:text-hsa-pink-500">
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="hover:text-hsa-pink-500">
             <Link href="/board">Board</Link>

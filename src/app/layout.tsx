@@ -35,9 +35,9 @@ export default function RootLayout({ children }: LayoutProps) {
         className={`flex min-h-screen w-screen flex-col overflow-x-hidden bg-hsa-tan-100 ${openSans.variable} ${songMyung.variable}`}
       >
         <ReactQueryClientProvider>
-          <Navigation />
+          {/* <Navigation /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </ReactQueryClientProvider>
       </body>
     </html>
