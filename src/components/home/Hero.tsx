@@ -1,6 +1,6 @@
-import HeroCard from "../HeroCard";
-import JoinButton from "../JoinButton";
-import YellowBar from "../YellowBar";
+import HeroCard from "./HeroCard";
+import JoinButton from "./JoinButton";
+import YellowBar from "./YellowBar";
 const Hero = () => {
   return (
     <div className="">
