@@ -17,7 +17,7 @@ const Do = () => {
           enriching space for students to learn, grow, and connect.
         </div>
       </div>
-      <div className="w-full space-y-5">
+      {/*<div className="w-full space-y-5">
         <Image
           src={border}
           alt="add image description here"
@@ -27,7 +27,7 @@ const Do = () => {
         <div className="w-full bg-hsa-gray-200">
           <Image src={hsaImage} alt="HSA" className="h-16 w-16 p-1" />
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 };
