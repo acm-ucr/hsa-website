@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 const Page = () => {
   return (
     <>
-      <Header />
+      <Header title="CALENDAR" />
       <EventCard />
       <CalendarEvents />
     </>

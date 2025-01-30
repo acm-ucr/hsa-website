@@ -4,7 +4,7 @@ import Board from "@/components/board/Board";
 const Page = () => {
   return (
     <>
-      <Header />
+      <Header title="BOARD" />
       <Board />
     </>
   );
