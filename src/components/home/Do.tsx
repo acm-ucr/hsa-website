@@ -1,6 +1,8 @@
-import Image from "next/image";
+{
+  /*import Image from "next/image";
 import border from "@/public/assets/border.svg";
-import hsaImage from "@/public/hsaImage.webp";
+import hsaImage from "@/public/hsaImage.webp";*/
+}
 
 const Do = () => {
   return (
