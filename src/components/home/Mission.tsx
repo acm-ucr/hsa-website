@@ -1,4 +1,5 @@
 import hsa4 from "@/public/assets/hsa4.svg";
+import Image from "next/image";
 
 const Mission = () => {
   return (
@@ -15,7 +16,7 @@ const Mission = () => {
         </div>
       </div>
       <div className="relative left-6 flex justify-end">
-        <img src={hsa4.src} alt="HSA" className="w-3/4" />
+        <Image src={hsa4} alt="HSA" className="w-3/4" />
       </div>
     </div>
   );
