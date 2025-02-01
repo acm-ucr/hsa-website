@@ -28,7 +28,9 @@ const Page = (props: {
         <div className="p-1 font-songMyung text-xl font-bold text-hsa-blue-100">
           {props.name}
         </div>
-        <div className="font-openSans text-hsa-gray-300">{props.position}</div>
+        <div className="font-openSans text-hsa-gray-300">
+          {props.position}
+        </div>
       </div>
     </div>
   );
