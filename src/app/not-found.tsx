@@ -1,6 +1,6 @@
 import Image from "next/image";
-import gallery1 from "@/public/assets/gallery1/Group 22.png";
-import gallery2 from "@/public/assets/gallery2/Group 23.png";
+import hsa8 from "@/public/assets/hsa8.svg";
+import hsa9 from "@/public/assets/hsa9.svg";
 import Link from "next/link";
 
 const NotFound = () => {
@@ -8,7 +8,7 @@ const NotFound = () => {
     <div className="grid flex-grow grid-cols-3">
       <div className="flex items-start justify-start">
         <Image
-          src={gallery1}
+          src={hsa8}
           alt="Gallery 2"
           className="mt-[10%] object-scale-down"
         />
@@ -31,7 +31,7 @@ const NotFound = () => {
 
       <div className="flex items-end justify-end">
         <Image
-          src={gallery2}
+          src={hsa9}
           alt="Gallery 2"
           className="mb-[10%] object-scale-down"
         />
