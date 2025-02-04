@@ -25,7 +25,7 @@ const EventCardBase: React.FC<EventCardBaseProps> = ({
           {shortDescription}
         </p>
       </div>
-      <p className="mt-6 ml-2 mr-16 font-openSans text-xl font-medium text-gray-700">
+      <p className="ml-2 mr-16 mt-6 font-openSans text-xl font-medium text-gray-700">
         {longDescription}
       </p>
     </div>
