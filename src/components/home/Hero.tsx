@@ -1,12 +1,11 @@
 import HeroCard from "./HeroCard";
 import JoinButton from "./JoinButton";
-import YellowBar from "./YellowBar";
 const Hero = () => {
   return (
     <div className="">
       <HeroCard />
       <JoinButton />
-      <YellowBar />
+      <div className="mb-5 max-w-full bg-hsa-yellow-100 p-4 shadow-md"></div>
     </div>
   );
 };
