@@ -2,7 +2,6 @@ import Hero from "@/components/home/Hero";
 import About from "@/components/home/About";
 import Mission from "@/components/home/Mission";
 import Do from "@/components/home/Do";
-import Example from "../components/example";
 
 const Home = () => {
   return (
@@ -11,7 +10,6 @@ const Home = () => {
       <About />
       <Mission />
       <Do />
-      <Example text1="Some" text2="Props" text3="Props" text4="Here" />
     </div>
   );
 };
