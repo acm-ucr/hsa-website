@@ -19,7 +19,7 @@ const EventCardBase: React.FC<EventCardBaseProps> = ({
 }) => {
   return (
     <div className="h-200 mx-auto mt-10 max-w-4xl rounded-2xl bg-white p-10 shadow-lg">
-      <h1 className="mb-5 mt-2 text-center font-songMyung text-6xl font-medium text-hsa-blue-100">
+      <h1 className="mb-6 mt-2 text-center font-songMyung text-6xl font-medium text-hsa-blue-100">
         {title}
       </h1>
       <div className="flex flex-wrap items-center">
