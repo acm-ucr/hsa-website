@@ -15,7 +15,7 @@ const Page = () => {
         <Header title=" Meet the Board" />
       </div>
 
-      <div className="flex w-full flex-col items-center bg-hsa-tan-100 p-5">
+      <div className="flex w-full flex-col items-center bg-hsa-tan-100 p-5 font-songMyung">
         <div className="flex w-full flex-row place-items-center justify-center">
           <Board
             position="President"

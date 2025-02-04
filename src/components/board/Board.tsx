@@ -7,9 +7,9 @@ const Page = (props: {
   badge: string;
 }) => {
   return (
-    <div className="flex w-1/3 flex-row items-center p-2">
+    <div className="flex w-1/4 flex-row items-center p-2">
       <div className="w-full flex-col place-items-center">
-        <div className="relative h-2/5 w-2/5">
+        <div className="relative w-3/4">
           <Image
             src={props.image}
             alt="boardmember"
@@ -22,7 +22,7 @@ const Page = (props: {
             alt="badge"
             width={0}
             height={0}
-            className="absolute bottom-3 h-1/4 w-1/4"
+            className="absolute bottom-3 w-1/4"
           />
         </div>
         <div className="p-1 font-songMyung text-xl font-bold text-hsa-blue-100">
