@@ -1,10 +1,10 @@
 import Border from "./Border";
 import Image from "next/image";
-import Facebook from "@/public/assets/Facebook.png";
-import Instagram from "@/public/assets/insta.png";
-import Image2 from "@/public/assets/image2.png";
-import Linktree from "@/public/assets/Linktree.png";
-import Contact from "@/public/assets/contact.png";
+import Facebook from "@/public/assets/Facebook.webp";
+import Instagram from "@/public/assets/insta.webp";
+import Image2 from "@/public/assets/image2.webp";
+import Linktree from "@/public/assets/Linktree.webp";
+import Contact from "@/public/assets/contact.webp";
 import Link from "next/link";
 
 const Footer = () => {
