@@ -2,7 +2,7 @@ import Border from "@/public/assets/border.svg";
 import Image from "next/image";
 import { Facebook } from "lucide-react";
 import { Instagram } from "lucide-react";
-import Image2 from "@/public/assets/image2.svg";
+import Image2 from "@/public/assets/Image2.svg";
 import Linktree from "@/public/assets/Linktree.svg";
 import Link from "next/link";
 
