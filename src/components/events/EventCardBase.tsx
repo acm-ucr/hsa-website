@@ -24,7 +24,7 @@ const EventCardBase: React.FC<EventCardBaseProps> = ({
       </h1>
       <div className="flex flex-wrap items-center">
         <div className="mr-5">
-          <Image src={imageURL} width={width} height={height} alt=""/>
+          <Image src={imageURL} width={width} height={height} alt="" />
         </div>
         <p className="flex-1 font-openSans text-xl font-medium text-gray-700">
           {shortDescription}
