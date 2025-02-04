@@ -1,14 +1,14 @@
 import "./globals.css";
-import { Source_Serif_4, Open_Sans } from "next/font/google";
+import { Open_Sans, Song_Myung } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const srcSerif = Source_Serif_4({
+const songMyung = Song_Myung({
   subsets: ["latin"],
   display: "swap",
-  weight: ["600"],
-  variable: "--source-serif-4-font",
+  weight: ["400"],
+  variable: "--song-myung-font",
 });
 
 const openSans = Open_Sans({
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`flex min-h-screen w-screen flex-col overflow-x-hidden bg-hsa-tan-100 ${openSans.variable} ${srcSerif.variable}`}
+        className={`flex min-h-screen w-screen flex-col overflow-x-hidden bg-hsa-tan-100 ${openSans.variable} ${songMyung.variable}`}
       >
         <ReactQueryClientProvider>
           <Navigation />
