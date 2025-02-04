@@ -15,19 +15,19 @@ const Navigation = () => {
           <div className="text-6xl"> HSA</div>
         </div>
         <ul className="ml-60 flex items-center space-x-36 text-4xl">
-          <li className="hover:text-hsa-pink-500">
+          <li className="hover:text-hsa-pink-300 hover:underline">
             <Link href="/home">Home</Link>
           </li>
-          <li className="hover:text-hsa-pink-500">
+          <li className="hover:text-hsa-pink-300 hover:underline">
             <Link href="/board">Board</Link>
           </li>
-          <li className="hover:text-hsa-pink-500">
+          <li className="hover:text-hsa-pink-300 hover:underline">
             <Link href="/events">Events</Link>
           </li>
-          <li className="hover:text-hsa-pink-500">
+          <li className="hover:text-hsa-pink-300 hover:underline">
             <Link href="/calendar">Calendar</Link>
           </li>
-          <li className="hover:text-hsa-pink-500">
+          <li className="hover:text-hsa-pink-300 hover:underline">
             <Link href="/gallery">Gallery</Link>
           </li>
         </ul>
