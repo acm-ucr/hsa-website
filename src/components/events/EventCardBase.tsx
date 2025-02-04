@@ -1,30 +1,38 @@
+import Image from "next/image";
+
 interface EventCardBaseProps {
   title: string;
-  location: string;
-  description: string;
+  shortDescription: string;
+  longDescription: string;
+  imageURL: string;
+  width: number;
+  height: number;
 }
 
 const EventCardBase: React.FC<EventCardBaseProps> = ({
   title,
-  location,
-  description,
+  shortDescription,
+  longDescription,
+  imageURL,
+  width,
+  height,
 }) => {
   return (
-    <div className="grid max-w-xl grid-cols-3 rounded-2xl bg-white p-8 shadow-md">
-      <div className="col-span-2">
-        <h1 className="mb-2 font-songMyung text-3xl font-bold text-blue-800">
-          {title}
-        </h1>
-        <p className="mb-2 text-sm font-semibold text-gray-600">
-          Location: {location}
-        </p>
-        <p className="mb-3 font-openSans font-medium text-gray-500">
-          {description}
+    <div className="h-200 mx-auto mt-10 max-w-4xl rounded-2xl bg-white p-10 shadow-lg">
+      <h1 className="mb-6 mt-2 text-center font-songMyung text-6xl font-medium text-hsa-blue-100">
+        {title}
+      </h1>
+      <div className="flex flex-wrap items-center">
+        <div className="mr-5">
+          <Image src={imageURL} width={width} height={height} alt=""/>
+        </div>
+        <p className="flex-1 font-openSans text-xl font-medium text-gray-700">
+          {shortDescription}
         </p>
       </div>
-      <div className="col-span-1 mb-5 aspect-[11/10] bg-gray-300"></div>
-      <div className="col-span-2 mr-5 bg-gray-300"></div>
-      <div className="col-span-1 aspect-[11/10] bg-gray-300"></div>
+      <p className="ml-2 mr-16 mt-6 font-openSans text-xl font-medium text-gray-700">
+        {longDescription}
+      </p>
     </div>
   );
 };
