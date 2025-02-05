@@ -36,7 +36,7 @@ const Footer = () => {
               target="_blank"
               className="w-5 duration-300 hover:scale-110"
             >
-              <Image src={Linktree} alt="Facebook" />
+              <Image src={Linktree} alt="Linktree" />
             </Link>
           </div>
         </div>
