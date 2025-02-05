@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Facebook } from "lucide-react";
 import { Instagram } from "lucide-react";
 import footerImage from "@/public/assets/footerImg.webp";
-import Linktree from "@/public/assets/tree.svg";
+import Linktree from "@/public/assets/linktree.svg";
 import Link from "next/link";
 
 const Footer = () => {
