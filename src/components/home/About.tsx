@@ -3,7 +3,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <div className="mx-auto">
-      <div className="flex justify-center mb-6">
+      <div className="mb-6 flex justify-center">
         <Image
           src="/assets/hsa6.svg"
           width={320}
@@ -13,7 +13,7 @@ const About = () => {
         />
       </div>
 
-      <div className="flex justify-center mb-6">
+      <div className="mb-6 flex justify-center">
         <Image
           src="/hsaPeople.webp"
           width={450}
@@ -23,7 +23,7 @@ const About = () => {
         />
       </div>
 
-      <div className=" mb-10 flex rotate-180 justify-center">
+      <div className="mb-10 flex rotate-180 justify-center">
         <Image
           src="/assets/hsa6.svg"
           width={320}
