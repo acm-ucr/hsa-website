@@ -1,30 +1,38 @@
+import Image from "next/image";
+
 const About = () => {
   return (
-    <div className="mx-auto -mt-24">
-      <div className="flex justify-center">
-        <img
+    <div className="mx-auto">
+      <div className="flex justify-center mb-6">
+        <Image
           src="/assets/hsa6.svg"
+          width={320}
+          height={320}
           alt="asset image"
-          className="ml-32 mr-auto h-80 w-80"
+          className="ml-32 mr-auto"
         />
       </div>
 
-      <div className="-mt-20 flex justify-center">
-        <img
+      <div className="flex justify-center mb-6">
+        <Image
           src="/hsaPeople.webp"
+          width={450}
+          height={280}
           alt="hsa people image"
-          className="h-70 ml-20 mr-auto w-[28rem]"
+          className="ml-20 mr-auto"
         />
       </div>
 
-      <div className="-mt-20 flex rotate-180 justify-center">
-        <img
+      <div className=" mb-10 flex rotate-180 justify-center">
+        <Image
           src="/assets/hsa6.svg"
+          width={320}
+          height={320}
           alt="asset image"
-          className="ml-auto mr-32 h-80 w-80"
+          className="ml-auto mr-32"
         />
       </div>
-      <div className="-mt-14 h-10 bg-hsa-pink-200 shadow-md"> </div>
+      <div className="h-10 bg-hsa-pink-200 shadow-md"> </div>
     </div>
   );
 };
