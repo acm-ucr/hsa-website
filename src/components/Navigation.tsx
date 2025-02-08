@@ -16,20 +16,20 @@ const Navigation = () => {
           </Link>
           <div className="ml-[30%] text-5xl"> HSA</div>
         </div>
-        <ul className="ml-[40%] flex w-2/3 items-center space-x-10 text-2xl">
-          <li className="hover:text-hsa-pink-500">
-            <Link href="/">Home</Link>
+        <ul className="ml-60 flex items-center space-x-36 text-4xl">
+          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
+            <Link href="/home">Home</Link>
           </li>
-          <li className="hover:text-hsa-pink-500 pl-[8%]">
+          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
             <Link href="/board">Board</Link>
           </li>
-          <li className="hover:text-hsa-pink-500 pl-[8%]">
+          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
             <Link href="/events">Events</Link>
           </li>
-          <li className="hover:text-hsa-pink-500 pl-[8%]">
+          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
             <Link href="/calendar">Calendar</Link>
           </li>
-          <li className="hover:text-hsa-pink-500 pl-[8%]">
+          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
             <Link href="/gallery">Gallery</Link>
           </li>
         </ul>
