@@ -1,22 +1,55 @@
+import Image from "next/image";
+
 const About = () => {
   return (
-    <div className="flex bg-white p-10">
-      <div className="w-3/5"></div>
-      <div className="w-2/5 text-right">
-        <h1 className="ml-5 p-5 font-serif text-6xl text-blue-800">About Us</h1>
-        <p className="text-lg text-gray-800">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p className="text-lg text-gray-800">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
+    <div className="mx-auto p-10">
+      {/* Content Section */}
+      <div className="mt-10 flex">
+        {/* Image Section */}
+        <div className="flex w-2/5 flex-col items-center">
+          <div className="mb-6">
+            <Image
+              src="/assets/hsa6.svg"
+              width={320}
+              height={320}
+              alt="asset image"
+            />
+          </div>
+
+          <div className="mb-6">
+            <Image
+              src="/hsaPeople.webp"
+              width={450}
+              height={280}
+              alt="hsa people image"
+            />
+          </div>
+
+          <div className="mb-10 rotate-180">
+            <Image
+              src="/assets/hsa6.svg"
+              width={320}
+              height={320}
+              alt="asset image"
+            />
+          </div>
+        </div>
+
+        <div className="flex w-3/5 flex-col justify-center text-right">
+          <div className="justify-between align-middle">
+            <h1 className="ml-5 p-5 font-serif text-6xl text-blue-800">
+              About Us
+            </h1>
+            <p className="ml-5 p-5 text-2xl text-gray-800">
+              HSA @ UCR is one of the few Hmong Student Associations in Southern
+              California. We strive to be a "home away from home" for all
+              students, whatever their background or identity.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <div className="h-10 bg-hsa-pink-200 shadow-md"></div>
     </div>
   );
 };
