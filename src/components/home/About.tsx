@@ -3,9 +3,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <div className="mx-auto p-10">
-      {/* Content Section */}
       <div className="mt-10 flex">
-        {/* Image Section */}
         <div className="flex w-2/5 flex-col items-center">
           <div className="mb-6">
             <Image
