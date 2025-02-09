@@ -14,7 +14,7 @@ const Mission = () => {
             & culture, and to build a safe & uplifting Hmong community
           </div>
         </div>
-        <div className="pl- relative flex">
+        <div className="relative flex">
           <Image src={hsa4} alt="HSA" className="w-3/4" />
         </div>
       </div>
