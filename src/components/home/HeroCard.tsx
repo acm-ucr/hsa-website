@@ -1,6 +1,6 @@
 const HeroCard = () => {
   return (
-    <div className="mx-auto mb-7 mt-20 max-w-xl border-4 border-hsa-green-100 bg-white pb-6 pt-12">
+    <div className="mx-auto mt-32 mb-7 max-w-xl border-4 border-hsa-green-100 bg-white pb-6 pt-12">
       <div className="text-center font-serif text-5xl font-medium leading-tight text-hsa-red-100">
         Hmong Student
         <div>
