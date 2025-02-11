@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="">
       <HeroCard />
       <JoinButton />
-      <div className="mb-5 max-w-full bg-hsa-yellow-100 p-4 shadow-md"></div>
+      <div className="h-8 max-w-full bg-hsa-yellow-100 shadow-md"></div>
     </div>
   );
 };
