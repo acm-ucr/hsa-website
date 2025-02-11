@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="mx-auto p-10">
-      <div className="mt-10 flex">
-        <div className="flex w-2/5 flex-col items-center">
-          <div className="mb-6">
+    <div>
+      <div className="flex items-center">
+        <div className="my-10 ml-12 flex flex-col items-center">
+          <div className="mb-6 items-center">
             <Image
               src="/assets/hsa6.svg"
               width={320}
@@ -23,7 +23,7 @@ const About = () => {
             />
           </div>
 
-          <div className="mb-10 rotate-180">
+          <div className="rotate-180">
             <Image
               src="/assets/hsa6.svg"
               width={320}
@@ -33,17 +33,15 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex w-3/5 flex-col justify-center text-right">
-          <div className="justify-between align-middle">
-            <h1 className="ml-5 p-5 font-serif text-6xl text-blue-800">
-              About Us
-            </h1>
-            <p className="ml-5 p-5 text-2xl text-gray-800">
-              HSA @ UCR is one of the few Hmong Student Associations in Southern
-              California. We strive to be a "home away from home" for all
-              students, whatever their background or identity.
-            </p>
-          </div>
+        <div className="my-5 flex w-3/4 flex-col justify-center pl-12 pr-12 text-right">
+          <h1 className="font-songMyung text-5xl text-hsa-blue-100">
+            About Us
+          </h1>
+          <p className="mt-4 font-openSans text-xl font-semibold text-hsa-gray-300">
+            HSA @ UCR is one of the few Hmong Student Associations in Southern
+            California. We strive to be a "home away from home" for all
+            students, whatever their background or identity.
+          </p>
         </div>
       </div>
 
