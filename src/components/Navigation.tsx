@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import hsaImage from "@/public/hsaImage.webp";
+//import { usePathname } from "next/navigation";
+//import { useEffect } from "react";
+
 const Navigation = () => {
   // const pathName = usePathname();
 
@@ -9,7 +12,7 @@ const Navigation = () => {
   return (
     <nav className="bg-hsa-pink-200 font-serif">
       <div className="mx-auto flex py-8 text-white">
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <Link href="/">
             <Image
               src={hsaImage}
@@ -19,7 +22,7 @@ const Navigation = () => {
           </Link>
           <div className="ml-[30%] text-5xl"> HSA</div>
         </div>
-        <ul className="ml-60 flex items-center space-x-36 text-4xl">
+        <ul className="ml-60 flex items-center gap-14 pl-3 text-4xl">
           <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
             <Link href="/home">Home</Link>
           </li>
