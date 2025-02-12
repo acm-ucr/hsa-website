@@ -12,13 +12,13 @@ const Navigation = () => {
       <div className="mx-auto flex py-8 text-white">
         <div className="flex items-center gap-2">
           <Link href="/">
-            <img
-              src="/hsaImage.webp"
+            <Image
+              src={hsaImage}
               alt="logo"
-              className="ml-12 mr-8 h-20 w-20"
+              className="ml-12 mr-10 object-scale-down"
             />
           </Link>
-          <div className="text-6xl"> HSA</div>
+          <div className="ml-[30%] text-5xl"> HSA</div>
         </div>
         <ul className="ml-60 flex items-center gap-14 pl-3 text-4xl">
           <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
