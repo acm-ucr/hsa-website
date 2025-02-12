@@ -1,7 +1,6 @@
 import Image from "next/image";
 import hsa6 from "@/public/assets/hsa6.svg";
 
-
 const About = () => {
   return (
     <div>
@@ -59,7 +58,7 @@ const About = () => {
       </div>
 
       <div className="h-10 bg-hsa-pink-200 shadow-md"></div>
-   </div>
+    </div>
   );
 };
 
