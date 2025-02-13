@@ -8,12 +8,12 @@ const Hero = () => {
     <div className="">
       <div className="relative mx-auto w-2/5">
         <Image
-          className="absolute -bottom-56 -left-36 z-10 transform"
+          className="absolute -bottom-60 -left-40 z-10 transform"
           src={hero}
           alt="hero border component"
         />
         <Image
-          className="absolute -right-36 top-8 z-10 scale-x-[-1] scale-y-[-1] transform"
+          className="absolute -right-44 top-4 z-10 scale-x-[-1] scale-y-[-1] transform"
           src={hero}
           alt="hero border component"
         />
