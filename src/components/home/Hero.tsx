@@ -5,15 +5,15 @@ import hero from "@/public/assets/hero.svg";
 
 const Hero = () => {
   return (
-    <div className="relative">
-      <div className="relative">
+    <div className="">
+      <div className="relative mx-auto w-2/5">
         <Image
-          className="absolute -bottom-56 left-64 z-10 transform"
+          className="absolute -bottom-56 -left-36 z-10 transform"
           src={hero}
           alt="hero border component"
         />
         <Image
-          className="absolute right-64 top-8 z-10 scale-x-[-1] scale-y-[-1] transform"
+          className="absolute -right-36 top-8 z-10 scale-x-[-1] scale-y-[-1] transform"
           src={hero}
           alt="hero border component"
         />
