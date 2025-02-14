@@ -7,7 +7,7 @@ type props = {
 
 const Header = ({ title }: props) => {
   return (
-    <div className="flex flex-row justify-between bg-hsa-gray-100 drop-shadow-2xl">
+    <div className="flex flex-row justify-between bg-hsa-gray-100 drop-shadow-xl">
       <div className="flex flex-row justify-center overflow-hidden">
         <Image src={hsa5} alt="HSA5" className="relative top-1/3 w-3/4" />
       </div>
