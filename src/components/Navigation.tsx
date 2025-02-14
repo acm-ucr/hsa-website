@@ -4,8 +4,8 @@ import hsaImage from "@/public/hsaImage.webp";
 
 const Navigation = () => {
   return (
-    <nav className="bg-hsa-pink-200 font-serif">
-      <div className="mx-auto flex py-8 text-white">
+    <nav className="bg-hsa-pink-200 font-songMyung">
+      <div className="mx-auto flex py-5 text-white">
         <div className="flex items-center">
           <Link href="/">
             <Image
@@ -16,7 +16,7 @@ const Navigation = () => {
           </Link>
           <div className="ml-[30%] text-5xl"> HSA</div>
         </div>
-        <ul className="ml-60 flex items-center space-x-36 text-4xl">
+        <ul className="ml-60 flex items-center space-x-36 text-3xl">
           <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
             <Link href="/home">Home</Link>
           </li>
