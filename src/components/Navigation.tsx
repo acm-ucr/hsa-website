@@ -1,13 +1,12 @@
+"use client";
+import { tags } from "@/data/NavBarData";
 import Link from "next/link";
 import Image from "next/image";
 import hsaImage from "@/public/hsaImage.webp";
-//import { usePathname } from "next/navigation";
-//import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
-  // const pathName = usePathname();
-
-  // useEffect( () => {},[pathName]);
+  const pathName = usePathname();
 
   return (
     <nav className="bg-hsa-pink-200 font-serif">
@@ -23,21 +22,20 @@ const Navigation = () => {
           <div className="ml-[30%] text-5xl"> HSA</div>
         </div>
         <ul className="ml-60 flex items-center gap-14 pl-3 text-4xl">
-          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
-            <Link href="/home">Home</Link>
-          </li>
-          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
-            <Link href="/board">Board</Link>
-          </li>
-          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
-            <Link href="/events">Events</Link>
-          </li>
-          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
-            <Link href="/calendar">Calendar</Link>
-          </li>
-          <li className="hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]">
-            <Link href="/gallery">Gallery</Link>
-          </li>
+          {tags.map((tag) => (
+            <li key={tag.link}>
+              <Link
+                href={tag.link}
+                className={`${
+                  pathName === tag.link
+                    ? "hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]"
+                    : ""
+                }`}
+              >
+                {tag.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="h-4 bg-hsa-blue-100"></div>
