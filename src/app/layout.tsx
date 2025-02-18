@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Song_Myung, Open_Sans } from "next/font/google";
+import { Open_Sans, Song_Myung } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
