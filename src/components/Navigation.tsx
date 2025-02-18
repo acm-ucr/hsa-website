@@ -13,23 +13,19 @@ const Navigation = () => {
       <div className="mx-auto flex py-8 text-white">
         <div className="flex items-center gap-2">
           <Link href="/">
-            <Image
-              src={hsaImage}
-              alt="logo"
-              className="ml-12 mr-10 object-scale-down"
-            />
+            <Image src={hsaImage} alt="logo" className="ml-12 mr-10" />
           </Link>
           <div className="ml-[30%] text-5xl"> HSA</div>
         </div>
-        <ul className="ml-60 flex items-center gap-14 pl-3 text-4xl">
+        <ul className="ml-60 flex items-center gap-14 pl-3 text-3xl">
           {tags.map((tag) => (
             <li key={tag.link}>
               <Link
                 href={tag.link}
                 className={`${
                   pathName === tag.link
-                    ? "hover:text-hsa-pink-300 hover:underline hover:decoration-[10px] hover:underline-offset-[12px]"
-                    : ""
+                    ? "text-hsa-pink-300 underline decoration-[10px] underline-offset-[12px]"
+                    : "hover:text-hsa-pink-300"
                 }`}
               >
                 {tag.name}
