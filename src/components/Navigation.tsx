@@ -17,7 +17,7 @@ const Navigation = () => {
           </Link>
           <div className="ml-[30%] text-5xl"> HSA</div>
         </div>
-        <ul className="ml-60 flex items-center gap-14 pl-3 text-3xl">
+        <ul className="ml-auto flex items-center gap-14 pr-12 text-3xl">
           {tags.map((tag) => (
             <li key={tag.link}>
               <Link
