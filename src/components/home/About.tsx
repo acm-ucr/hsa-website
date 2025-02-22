@@ -3,8 +3,8 @@ import Image from "next/image";
 const About = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="flex flex-col my-10 md:ml-12 items-center">
+      <div className="flex flex-col items-center md:flex-row">
+        <div className="my-10 flex flex-col items-center md:ml-12">
           <div className="mb-6 items-center">
             <Image
               src="/assets/hsa6.svg"
@@ -33,8 +33,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="my-5 flex flex-col w-full md:w-1/2 justify-center px-4 md:px-24 text-center md:text-right max-w-full">
-          <h1 className="font-songMyung md:text-5xl text-hsa-blue-100">
+        <div className="my-5 flex w-full max-w-full flex-col justify-center px-4 text-center md:w-1/2 md:px-24 md:text-right">
+          <h1 className="font-songMyung text-hsa-blue-100 md:text-5xl">
             About Us
           </h1>
           <p className="mt-4 font-openSans text-xl font-semibold text-hsa-gray-300">
