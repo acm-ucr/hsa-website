@@ -3,20 +3,20 @@
 import React from "react";
 
 const images_gallery = [
-  { src: "/gallery images/image1.webp" },
-  { src: "/gallery images/image2.webp" },
-  { src: "/gallery images/image3.webp" },
-  { src: "/gallery images/image4.webp" },
-  { src: "/gallery images/image6.webp" },
-  { src: "/gallery images/image7.webp" },
-  { src: "/gallery images/image8.webp" },
-  { src: "/gallery images/image9.webp" },
-  { src: "/gallery images/image10.webp" },
-  { src: "/gallery images/image11.webp" },
-  { src: "/gallery images/image12.webp" },
-  { src: "/gallery images/image13.webp" },
-  { src: "/gallery images/image14.webp" },
-  { src: "/gallery images/image15.webp" },
+  { src: "/gallery_images/image1.webp" },
+  { src: "/gallery_images/image2.webp" },
+  { src: "/gallery_images/image3.webp" },
+  { src: "/gallery_images/image4.webp" },
+  { src: "/gallery_images/image6.webp" },
+  { src: "/gallery_images/image7.webp" },
+  { src: "/gallery_images/image8.webp" },
+  { src: "/gallery_images/image9.webp" },
+  { src: "/gallery_images/image10.webp" },
+  { src: "/gallery_images/image11.webp" },
+  { src: "/gallery_images/image12.webp" },
+  { src: "/gallery_images/image13.webp" },
+  { src: "/gallery_images/image14.webp" },
+  { src: "/gallery_images/image15.webp" },
 ];
 
 const Photos = () => {
