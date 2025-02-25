@@ -12,7 +12,7 @@ const Header = ({ title }: props) => {
         <Image src={hsa5} alt="HSA5" className="relative top-1/3 w-3/4" />
       </div>
       <div className="flex flex-col justify-center">
-        <div className="w-full pr-10 font-songMyung text-3xl text-gray-700 md:text-5xl lg:text-7xl">
+        <div className="w-full whitespace-nowrap font-songMyung text-3xl text-hsa-gray-300 md:text-5xl lg:text-7xl">
           {title}
         </div>
       </div>
