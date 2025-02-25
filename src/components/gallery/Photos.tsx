@@ -8,6 +8,7 @@ const images_gallery = [
   { src: "/gallery/image2.webp" },
   { src: "/gallery/image3.webp" },
   { src: "/gallery/image4.webp" },
+  { src: "/gallery/image5.webp" },
   { src: "/gallery/image6.webp" },
   { src: "/gallery/image7.webp" },
   { src: "/gallery/image8.webp" },
