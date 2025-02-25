@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 
 const images_gallery = [
-
   { src: "/gallery/image1.webp" },
   { src: "/gallery/image2.webp" },
   { src: "/gallery/image3.webp" },
@@ -20,7 +19,6 @@ const images_gallery = [
   { src: "/gallery/image13.webp" },
   { src: "/gallery/image14.webp" },
   { src: "/gallery/image15.webp" },
-
 ];
 
 const Photos = () => {
