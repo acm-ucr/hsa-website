@@ -3,7 +3,6 @@ import Image from "next/image";
 import HSAlogo from "@/public/assets/HSAlogo.svg";
 import { Facebook } from "lucide-react";
 import { Instagram } from "lucide-react";
-import footerImage from "@/public/assets/footerImg.webp";
 import Linktree from "@/public/assets/tree.svg";
 import Link from "next/link";
 

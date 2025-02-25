@@ -2,7 +2,6 @@
 import { tags } from "@/data/NavBarData";
 import Link from "next/link";
 import Image from "next/image";
-import hsaImage from "@/public/hsaImage.webp";
 import HSAlogo from "@/public/assets/HSAlogo.svg";
 import { usePathname } from "next/navigation";
 
