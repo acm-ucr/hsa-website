@@ -9,15 +9,15 @@ const Header = ({ title }: props) => {
   return (
     <div className="flex flex-row justify-between bg-hsa-gray-100 drop-shadow-xl">
       <div className="flex flex-row justify-center overflow-hidden">
-        <Image src={hsa5} alt="HSA5" className="relative top-1/3 w-3/4" />
+        <Image src={hsa5} alt="HSA5" className="relative top-1/3 w-2/3" />
       </div>
       <div className="flex flex-col justify-center">
-        <div className="w-full whitespace-nowrap font-songMyung text-3xl text-hsa-gray-300 md:text-5xl lg:text-7xl">
+        <div className="w-full whitespace-nowrap font-songMyung text-3xl text-hsa-gray-300 md:text-6xl">
           {title}
         </div>
       </div>
       <div className="flex flex-row justify-center overflow-hidden">
-        <Image src={hsa5} alt="HSA5" className="relative bottom-1/3 w-3/4" />
+        <Image src={hsa5} alt="HSA5" className="relative bottom-1/3 w-2/3" />
       </div>
     </div>
   );
