@@ -17,17 +17,17 @@ const Navigation = () => {
         </Link>
 
         <ul className="mr-[5%] flex items-center gap-[2vw] text-[3vw] sm:text-[2vw]">
-          {tags.map((tag) => (
-            <li key={tag.link}>
+          {tags.map(({ link, name }) => (
+            <li key={link}>
               <Link
-                href={tag.link}
+                href={link}
                 className={`${
-                  pathName === tag.link
+                  pathName === link
                     ? "text-hsa-pink-300 underline decoration-[10px] underline-offset-[12px]"
                     : "hover:text-hsa-pink-300"
                 }`}
               >
-                {tag.name}
+                {name}
               </Link>
             </li>
           ))}
