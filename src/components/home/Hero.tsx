@@ -13,7 +13,7 @@ const Hero = () => {
           alt="hero border component"
         />
         <Image
-          className="absolute -right-44 top-4 z-10 scale-x-[-1] scale-y-[-1] transform"
+          className="absolute -right-44 -top-4 z-10 scale-x-[-1] scale-y-[-1] transform"
           src={hero}
           alt="hero border component"
         />
