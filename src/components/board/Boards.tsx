@@ -1,11 +1,9 @@
 import { board } from "../../data/Board.js";
 import Board from "./Board";
-import hsa1 from "@/public/assets/hsa1.svg";
 
 const Boards = () => {
   return (
     <div className="flex flex-col items-center bg-hsa-tan-100 p-5 font-songMyung">
-      {/* Large & Medium Screens */}
       <div className="hidden w-full justify-center gap-20 md:flex">
         {board.slice(0, 3).map((BOARD, index) => (
           <Board
@@ -30,7 +28,6 @@ const Boards = () => {
         ))}
       </div>
 
-      {/* Small Layout */}
       <div className="grid grid-cols-2 gap-6 md:hidden">
         {board.slice(0, 4).map((BOARD, index) => (
           <Board
@@ -38,7 +35,7 @@ const Boards = () => {
             position={BOARD.position}
             name={BOARD.name}
             image={BOARD.image.src}
-            badge={BOARD.name === "Jacob Vang" ? hsa1.src : BOARD.badge} // Condition for Jacob
+            badge={BOARD.badge}
           />
         ))}
       </div>
@@ -49,7 +46,7 @@ const Boards = () => {
           position={board[4].position}
           name={board[4].name}
           image={board[4].image.src}
-          badge={board[4].name === "Jacob Vang" ? hsa1.src : board[4].badge} // Condition for Jacob
+          badge={board[4].badge}
         />
       </div>
     </div>
