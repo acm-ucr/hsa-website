@@ -2,7 +2,7 @@
 import { tags } from "@/data/NavBarData";
 import Link from "next/link";
 import Image from "next/image";
-import hsaImage from "@/public/hsaImage.webp";
+import HSAlogo from "@/public/assets/HSAlogo.svg";
 import { usePathname } from "next/navigation";
 
 const Navigation = () => {
@@ -12,7 +12,7 @@ const Navigation = () => {
     <nav className="bg-hsa-pink-200 font-serif">
       <div className="flex justify-between py-4 text-hsa-tan-100">
         <Link href="/" className="ml-[4%] flex items-center gap-[1vw]">
-          <Image src={hsaImage} alt="logo" className="w-12" />
+          <Image src={HSAlogo} alt="logo" className="w-12" />
           <div className="text-[3vw] sm:text-[2vw]">HSA</div>
         </Link>
 
