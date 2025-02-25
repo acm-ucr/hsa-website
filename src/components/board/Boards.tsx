@@ -1,5 +1,5 @@
-import { board } from "../../data/Board.js";
-import Board from "./Board";
+import { board } from "@/data/Board.js";
+import Board from "@/components/board/Board";
 
 const Boards = () => {
   return (

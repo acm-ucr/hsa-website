@@ -1,8 +1,8 @@
-import Lincoln from "../../public/assets/LincolnYang.webp";
-import Kayleigh from "../../public/assets/KayleighYoung.webp";
-import Anjaly from "../../public/assets/AnjalyThao.webp";
-import Jacob from "../../public/assets/JacobVang.webp";
-import Sara from "../../public/assets/SaraCha.webp";
+import Lincoln from "@/public/assets/LincolnYang.webp";
+import Kayleigh from "@/public/assets/KayleighYoung.webp";
+import Anjaly from "@/public/assets/AnjalyThao.webp";
+import Jacob from "@/public/assets/JacobVang.webp";
+import Sara from "@/public/assets/SaraCha.webp";
 import hsa2 from "@/public/assets/hsa2.svg";
 
 export const board = [
