@@ -10,14 +10,13 @@ const Navigation = () => {
 
   return (
     <nav className="bg-hsa-pink-200 font-serif">
-      <div className="mx-auto flex py-8 text-white">
-        <div className="flex items-center gap-2">
-          <Link href="/">
-            <Image src={hsaImage} alt="logo" className="ml-12 mr-10" />
-          </Link>
-          <div className="ml-[30%] text-5xl"> HSA</div>
-        </div>
-        <ul className="ml-60 flex items-center gap-14 pl-3 text-3xl">
+      <div className="flex justify-between py-4 text-hsa-tan-100">
+        <Link href="/" className="ml-[4%] flex items-center gap-[1vw]">
+          <Image src={hsaImage} alt="logo" className="w-12" />
+          <div className="text-[3vw] sm:text-[2vw]"> HSA</div>
+        </Link>
+
+        <ul className="mr-[5%] flex items-center gap-[2vw] text-[3vw] sm:text-[2vw]">
           {tags.map((tag) => (
             <li key={tag.link}>
               <Link
