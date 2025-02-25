@@ -1,5 +1,6 @@
 import Border from "@/public/assets/border.svg";
 import Image from "next/image";
+import HSAlogo from "@/public/assets/HSAlogo.svg";
 import { Facebook } from "lucide-react";
 import { Instagram } from "lucide-react";
 import footerImage from "@/public/assets/footerImg.webp";
@@ -13,7 +14,7 @@ const Footer = () => {
       <div className="bg-hsa-gray-200 py-6">
         <div className="sm:px-15 flex justify-between px-8">
           <div className="flex justify-start">
-            <Image src={footerImage} alt="Image2" className="w-10 sm:w-14" />
+            <Image src={HSAlogo} alt="Image2" className="w-10 sm:w-14" />
           </div>
           <div className="flex w-[50%] justify-end gap-3 pb-1 pt-3 font-semibold text-white">
             <div className="pb-4 text-xl duration-300">Contact us!</div>
