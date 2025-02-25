@@ -6,13 +6,11 @@ import Link from "next/link";
 const NotFound = () => {
   return (
     <div className="grid flex-grow grid-cols-3">
-      <div className="flex items-start justify-start">
-        <Image
-          src={hsa8}
-          alt="Gallery 2"
-          className="mt-[10%] object-scale-down"
-        />
-      </div>
+      <Image
+        src={hsa8}
+        alt="Gallery 2"
+        className="mt-[10%] object-scale-down"
+      />
 
       <div className="flex flex-col items-center justify-center">
         <p className="font-songMyung text-9xl font-semibold text-hsa-blue-100">

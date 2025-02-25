@@ -13,27 +13,27 @@ const Navigation = () => {
       <div className="flex justify-between py-4 text-hsa-tan-100">
         <Link href="/" className="ml-[4%] flex items-center gap-[1vw]">
           <Image src={hsaImage} alt="logo" className="w-12" />
-          <div className="text-[3vw] sm:text-[2vw]"> HSA</div>
+          <div className="text-[3vw] sm:text-[2vw]">HSA</div>
         </Link>
 
-        <ul className="mr-[5%] flex items-center gap-[2vw] text-[3vw] sm:text-[2vw]">
+        <div className="mr-[5%] flex items-center gap-[4vw] text-[3vw] sm:text-[2vw]">
           {tags.map(({ link, name }) => (
-            <li key={link}>
+            <div key={link}>
               <Link
                 href={link}
                 className={`${
                   pathName === link
-                    ? "text-hsa-pink-300 underline decoration-[10px] underline-offset-[12px]"
-                    : "hover:text-hsa-pink-300"
+                    ? "underline decoration-[6px] underline-offset-[10px]"
+                    : "hover:text-hsa-blue-200"
                 }`}
               >
                 {name}
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
-      <div className="h-4 bg-hsa-blue-100"></div>
+      <div className="h-4 bg-hsa-blue-100" />
     </nav>
   );
 };
