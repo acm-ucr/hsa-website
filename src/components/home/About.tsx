@@ -34,10 +34,10 @@ const About = () => {
         </div>
 
         <div className="my-5 flex w-full max-w-full flex-col justify-center px-4 text-center md:w-1/2 md:px-24 md:text-right">
-          <h1 className="font-songMyung text-hsa-blue-100 md:text-5xl">
+          <h1 className="font-songMyung text-5xl text-hsa-blue-100">
             About Us
           </h1>
-          <p className="mt-4 font-openSans text-xl font-semibold text-hsa-gray-300">
+          <p className="mt-4 flex font-openSans text-xl font-semibold text-hsa-gray-300">
             HSA @ UCR is one of the few Hmong Student Associations in Southern
             California. We strive to be a "home away from home" for all
             students, whatever their background or identity.
