@@ -3,8 +3,8 @@ import Image from "next/image";
 const About = () => {
   return (
     <div>
-      <div className="flex items-center">
-        <div className="my-10 ml-12 flex flex-col items-center">
+      <div className="flex flex-col items-center md:flex-row">
+        <div className="my-10 flex flex-col items-center md:ml-12">
           <div className="mb-6 items-center">
             <Image
               src="/assets/hsa6.svg"
@@ -33,11 +33,11 @@ const About = () => {
           </div>
         </div>
 
-        <div className="my-5 flex w-3/4 flex-col justify-center pl-12 pr-12 text-right">
+        <div className="my-5 flex w-full max-w-full flex-col justify-center px-4 text-center md:w-1/2 md:px-24 md:text-right">
           <h1 className="font-songMyung text-5xl text-hsa-blue-100">
             About Us
           </h1>
-          <p className="mt-4 font-openSans text-xl font-semibold text-hsa-gray-300">
+          <p className="mt-4 flex font-openSans text-xl font-semibold text-hsa-gray-300">
             HSA @ UCR is one of the few Hmong Student Associations in Southern
             California. We strive to be a "home away from home" for all
             students, whatever their background or identity.
