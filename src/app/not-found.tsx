@@ -16,7 +16,7 @@ const NotFound = () => {
         <p className="font-songMyung text-9xl font-semibold text-hsa-blue-100">
           404
         </p>
-        <p className="font-lightweight pt-3 font-sans text-xl text-hsa-gray-300">
+        <p className="font-lightweight pt-3 font-sans text-hsa-gray-300 md:text-base lg:text-xl">
           page not found!
         </p>
         <Link
