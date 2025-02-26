@@ -2,7 +2,7 @@ import { footers } from "../data/FooterData";
 import Link from "next/link";
 import Image from "next/image";
 import Border from "@/public/assets/border.svg";
-import footerImage from "@/public/assets/footerImg.webp";
+import footerImage from "@/public/assets/HSAlogo.svg";
 import {Facebook} from "lucide-react";
 
 const Footer = () => {
@@ -14,12 +14,6 @@ const Footer = () => {
 
           <div className="flex w-1/4 font-semibold text-white bg-slate-600">
             <div className="pb-4 text-xl duration-300">Contact us!</div>
-          <Link
-              href= "https://www.instagram.com/hsa.ucr/" 
-              target="_blank"
-              className="duration-300 hover:scale-110"
-            ></Link>
-          <Facebook/>
             {footers.map((link, index) => (
               <Link
               key = {index}

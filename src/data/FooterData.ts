@@ -9,15 +9,15 @@ interface footer {
 
 export const footers: footer[] = [
     {
-        icon: <Instagram size={40} className="text-white hover:text-leap-yellow" />,
+        icon: <Instagram/>,
         link: "https://www.instagram.com/hsa.ucr/",
     },
     // {
-    //     icon: Facebook,
+    //     icon: <Facebook/>,
     //     link: "https://www.facebook.com/hsa.ucriverside",
     // },
     // {
     //     icon: <Image src={linktree}/>,
-    //     link: "linktr.ee/hsaucr",
+    //     link: "https://linktr.ee/hsaucr?fbclid=PAZXh0bgNhZW0CMTEAAaZfaPhqX1q9SgLLM68xZX-ED_jj669Ej66BvOZ4u4N87PldtVkBl3X_Ys4_aem_WKm_Fwe5Sb4UX718TfkHwg",
     // },
 ];
