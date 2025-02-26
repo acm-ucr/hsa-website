@@ -1,45 +1,36 @@
-import Border from "@/public/assets/border.svg";
-import Image from "next/image";
-import { Facebook } from "lucide-react";
-import { Instagram } from "lucide-react";
-import footerImage from "@/public/assets/footerImg.webp";
-import Linktree from "@/public/assets/tree.svg";
+import { footers } from "../data/FooterData";
 import Link from "next/link";
+import Image from "next/image";
+import Border from "@/public/assets/border.svg";
+import footerImage from "@/public/assets/footerImg.webp";
+import {Facebook} from "lucide-react";
 
 const Footer = () => {
   return (
     <div>
       <Image src={Border} alt="border" className="pb-10 pr-8" />
-      <div className="bg-hsa-gray-200 py-6">
-        <div className="sm:px-15 flex justify-between px-8">
-          <div className="flex justify-start">
-            <Image src={footerImage} alt="Image2" className="w-10 sm:w-14" />
-          </div>
-          <div className="flex w-[50%] justify-end gap-3 pb-1 pt-3 font-semibold text-white">
+      <div className=" flex items-center justify-between bg-hsa-gray-200">
+          <Image src={footerImage} alt="Image2" className="flex w-full justify-items-start ml-8 sm:w-14 bg-red-300"/>
+
+          <div className="flex w-1/4 font-semibold text-white bg-slate-600">
             <div className="pb-4 text-xl duration-300">Contact us!</div>
-            <Link
-              href="https://www.instagram.com/hsa.ucr/"
+          <Link
+              href= "https://www.instagram.com/hsa.ucr/" 
+              target="_blank"
+              className="duration-300 hover:scale-110"
+            ></Link>
+          <Facebook/>
+            {footers.map((link, index) => (
+              <Link
+              key = {index}
+              href= {link.link}  
               target="_blank"
               className="duration-300 hover:scale-110"
             >
-              <Instagram />
+              {link.icon}
             </Link>
-            <Link
-              href="https://www.facebook.com/hsa.ucriverside"
-              target="_blank"
-              className="duration-300 hover:scale-110"
-            >
-              <Facebook />
-            </Link>
-            <Link
-              href="linktr.ee/hsaucr"
-              target="_blank"
-              className="w-5 duration-300 hover:scale-110"
-            >
-              <Image src={Linktree} alt="Linktree" />
-            </Link>
+            ))}
           </div>
-        </div>
       </div>
     </div>
   );
