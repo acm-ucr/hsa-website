@@ -10,10 +10,15 @@ const Footer = () => {
   return (
     <div className="justify-center">
       {/* Border Repeating */}
-      <div className="overflow-hidden w-full">
-        <div className="flex w-full justify-start gap-x-4 justify-center">
+      <div className="w-full overflow-hidden">
+        <div className="flex w-full justify-start justify-center gap-x-4">
           {[...Array(2)].map((_, index) => (
-            <Image key={index} src={Border} alt="border" className="w-[70%] min-w-[60]" />
+            <Image
+              key={index}
+              src={Border}
+              alt="border"
+              className="w-[70%] min-w-[60]"
+            />
           ))}
         </div>
       </div>
