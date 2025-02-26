@@ -1,9 +1,3 @@
-{
-  /*import Image from "next/image";
-import border from "@/public/assets/border.svg";
-import hsaImage from "@/public/hsaImage.webp";*/
-}
-
 const Do = () => {
   return (
     <div className="bg-hsatan-100 w-full flex-row rounded-lg">

@@ -3,11 +3,8 @@ import Boards from "@/components/board/Boards";
 
 const Page = () => {
   return (
-    <div>
-      <div className="font-songMyung">
-        <Header title=" Meet the Board" />
-      </div>
-
+    <div className="font-songMyung">
+      <Header title="Meet the Board" />
       <Boards />
     </div>
   );

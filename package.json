@@ -13,7 +13,12 @@
   },
   "dependencies": {
     "@tanstack/react-query": "~5.53.3",
+<<<<<<< HEAD
     "lucide-react": "^0.417.0",
+=======
+    "lucide-react": "~0.417.0",
+    "motion": "^12.4.7",
+>>>>>>> 9e88b38b318dfb0b4bdcb387efc22d9b86396eb3
     "next": "~14.2.10",
     "react": "~18.3.1",
     "react-dom": "~18.3.1",
