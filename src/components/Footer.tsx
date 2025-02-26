@@ -9,7 +9,6 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="justify-center">
-      {/* Border Repeating */}
       <div className="w-full overflow-hidden">
         <div className="flex w-full justify-start justify-center gap-x-4">
           {[...Array(2)].map((_, index) => (
