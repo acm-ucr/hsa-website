@@ -12,19 +12,19 @@ const Footer = () => {
         <Image
           src={footerImage}
           alt="Image2"
-          className="ml-2 flex w-1/6 justify-items-start p-1 md:w-14"
+          className="ml-2 flex w-[10%] justify-items-start p-1 md:w-14"
         />
 
         <div className="flex place-content-center font-openSans text-xl font-semibold text-white md:w-1/6">
           <p className="mr-3">Contact Us!</p>
-          {footers.map((link, index) => (
+          {footers.map(({link, icon}, index) => (
             <Link
               key={index}
-              href={link.link}
+              href={link}
               target="_blank"
               className="mr-2 flex duration-300 hover:scale-110"
             >
-              {link.icon}
+              {icon}
             </Link>
           ))}
         </div>
