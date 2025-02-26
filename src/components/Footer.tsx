@@ -1,4 +1,4 @@
-import { footers } from "../data/FooterData";
+import { footers } from "@/data/FooterData";
 import Link from "next/link";
 import Image from "next/image";
 import Border from "@/public/assets/border.svg";
