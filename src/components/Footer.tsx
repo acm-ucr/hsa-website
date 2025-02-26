@@ -8,8 +8,15 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div>
-      <Image src={Border} alt="border" className="pb-10 pr-8" />
+    <div className="justify-center">
+      {/* Border Repeating */}
+      <div className="overflow-hidden w-full">
+        <div className="flex w-full justify-start gap-x-4 justify-center">
+          {[...Array(2)].map((_, index) => (
+            <Image key={index} src={Border} alt="border" className="w-[70%] min-w-[60]" />
+          ))}
+        </div>
+      </div>
       <div className="bg-hsa-gray-200 py-6">
         <div className="sm:px-15 flex justify-between px-8">
           <div className="flex justify-start">
