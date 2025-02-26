@@ -9,9 +9,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="justify-center">
-      <div className="mb-3 w-full overflow-hidden">
+      <div className="mb-5 w-full overflow-hidden">
         <div className="flex w-full justify-start justify-center gap-x-4">
-          {[...Array(2)].map((_, index) => (
+          {[...Array(3)].map((_, index) => (
             <Image
               key={index}
               src={Border}
