@@ -19,7 +19,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "HSA Website",
+  title: "HSA@UCR",
   description:
     "Spreading knowledge of our history & culture, and building a safe & uplifting Hmong community @ UCR",
 };

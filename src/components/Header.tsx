@@ -7,15 +7,17 @@ type props = {
 
 const Header = ({ title }: props) => {
   return (
-    <div className="flex flex-row justify-between bg-hsa-gray-100">
-      <div className="mt-12 flex flex-row justify-center">
-        <Image src={hsa5} alt="HSA5" className="w-1/2" />
+    <div className="flex flex-row justify-between bg-hsa-gray-100 drop-shadow-xl">
+      <div className="flex flex-row justify-center overflow-hidden">
+        <Image src={hsa5} alt="HSA5" className="relative top-1/3 w-2/3" />
       </div>
-      <div className="ml-5 flex flex-col justify-center">
-        <div className="mb-5 w-full pr-10 text-4xl">{title}</div>
+      <div className="flex flex-col justify-center">
+        <div className="w-full whitespace-nowrap font-songMyung text-3xl text-hsa-gray-300 md:text-6xl">
+          {title}
+        </div>
       </div>
-      <div className="mb-12 flex flex-row justify-center">
-        <Image src={hsa5} alt="HSA5" className="w-1/2" />
+      <div className="flex flex-row justify-center overflow-hidden">
+        <Image src={hsa5} alt="HSA5" className="relative bottom-1/3 w-2/3" />
       </div>
     </div>
   );
