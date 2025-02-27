@@ -6,8 +6,20 @@ import footerImage from "@/public/assets/HSAlogo.svg";
 
 const Footer = () => {
   return (
-    <div>
-      <Image src={Border} alt="border" className="pb-10 pr-8" />
+    <div className="justify-center">
+      <div className="mb-5 w-full overflow-hidden">
+        <div className="flex w-full justify-center gap-x-4">
+          {[...Array(2)].map((_, index) => (
+            <Image
+              key={index}
+              src={Border}
+              alt="border"
+              className="w-[70%] min-w-[60]"
+            />
+          ))}
+        </div>
+      </div>
+
       <div className="flex items-center justify-between bg-hsa-gray-200 p-2">
         <Image
           src={footerImage}
