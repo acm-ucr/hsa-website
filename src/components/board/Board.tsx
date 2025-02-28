@@ -1,4 +1,5 @@
 import Image from "next/image";
+import * as motion from "motion/react-client"
 
 const Page = (props: {
   position: string;
@@ -6,8 +7,22 @@ const Page = (props: {
   image: string;
   badge: string;
 }) => {
+  const slidedownanimation = {
+    hidden: { opacity: 0, y: -10 },
+    show: {
+      opacity: 1,
+      y: 0,
+    },
+  };
   return (
     <div className="flex flex-col items-center p-4">
+      <motion.div
+      variants={slidedownanimation}
+      transition={{ duration: 1 }}
+      viewport={{ once: true, amount: 0.5 }}
+      initial="hidden"
+      whileInView="show"
+      >
       <div className="relative flex h-36 w-36 md:h-60 md:w-60 lg:h-72 lg:w-72">
         <Image
           src={props.image}
@@ -32,6 +47,7 @@ const Page = (props: {
           {props.position}
         </div>
       </div>
+      </motion.div>
     </div>
   );
 };
