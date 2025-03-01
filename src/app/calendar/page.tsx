@@ -12,7 +12,7 @@ const Page = () => {
           <EventCard key={index} data={event} />
         ))}
       </div>
-      <div className="bg-hsa-tan-200 mb-8">
+      <div className="mb-8 bg-hsa-tan-200">
         <CalendarEvents />
       </div>
     </>
