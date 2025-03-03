@@ -27,14 +27,14 @@ const Page = (props: {
           <Image
             src={props.image}
             alt="boardmember"
-            width={144} // Matches h-36 (36 * 4 = 144px)
+            width={144}
             height={144}
             className="h-full w-full rounded-full object-cover"
           />
           <Image
             src={props.badge}
             alt="badge"
-            width={52} // Slightly smaller badge for balance
+            width={52}
             height={52}
             className="absolute bottom-3 w-1/4"
           />
