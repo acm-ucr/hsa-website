@@ -18,7 +18,7 @@ const Mission = () => {
           <Image src={hsa4} alt="HSA" className="w-3/4" />
         </div>
       </div>
-      <div className="h-8 max-w-full bg-hsa-green-100 shadow-md"></div>
+      <div className="h-8 max-w-full bg-hsa-green-100 shadow-md" />
     </>
   );
 };
