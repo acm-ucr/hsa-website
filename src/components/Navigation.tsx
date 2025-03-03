@@ -2,7 +2,7 @@
 import { tags } from "@/data/NavBarData";
 import Link from "next/link";
 import Image from "next/image";
-import hsaImage from "@/public/hsaImage.webp";
+import HSAlogo from "@/public/assets/HSAlogo.svg";
 import { usePathname } from "next/navigation";
 
 const Navigation = () => {
@@ -10,31 +10,30 @@ const Navigation = () => {
 
   return (
     <nav className="bg-hsa-pink-200 font-serif">
-      <div className="mx-auto flex py-8 text-white">
-        <div className="flex items-center gap-2">
-          <Link href="/">
-            <Image src={hsaImage} alt="logo" className="ml-12 mr-10" />
-          </Link>
-          <div className="ml-[30%] text-5xl"> HSA</div>
-        </div>
-        <ul className="ml-60 flex items-center gap-14 pl-3 text-3xl">
-          {tags.map((tag) => (
-            <li key={tag.link}>
+      <div className="flex justify-between py-4 text-hsa-tan-100">
+        <Link href="/" className="ml-[4%] flex items-center gap-[1vw]">
+          <Image src={HSAlogo} alt="logo" className="w-12" />
+          <div className="text-[3vw] sm:text-[2vw]">HSA</div>
+        </Link>
+
+        <div className="mr-[5%] flex items-center gap-[4vw] text-[3vw] sm:text-[2vw]">
+          {tags.map(({ link, name }) => (
+            <div key={link}>
               <Link
-                href={tag.link}
+                href={link}
                 className={`${
-                  pathName === tag.link
-                    ? "text-hsa-pink-300 underline decoration-[10px] underline-offset-[12px]"
-                    : "hover:text-hsa-pink-300"
+                  pathName === link
+                    ? "underline decoration-[6px] underline-offset-[10px]"
+                    : "hover:text-hsa-blue-200"
                 }`}
               >
-                {tag.name}
+                {name}
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
-      <div className="h-4 bg-hsa-blue-100"></div>
+      <div className="h-4 bg-hsa-blue-100" />
     </nav>
   );
 };
