@@ -63,7 +63,6 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`lg:hidden ${isMobileMenuOpen ? "block" : "hidden"} bg-hsa-pink-200 px-6 py-4 text-hsa-tan-100`}
       >
