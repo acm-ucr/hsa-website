@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center md:flex-row">
-        <div className="my-10 flex flex-col text-center items-center md:ml-12">
+        <div className="my-10 flex flex-col items-center text-center md:ml-12">
           <div className="mb-6 items-center">
             <Image
               src="/assets/hsa6.svg"
