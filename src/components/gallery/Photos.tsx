@@ -28,7 +28,7 @@ const Photos = () => {
         <div key={index} className="overflow-hidden rounded-lg shadow-md">
           <Image
             src={image.src}
-            alt="gallery"
+            alt={`Gallery ${index + 1}`}
             className="h-full w-full object-cover"
             width={500}
             height={500}

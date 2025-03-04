@@ -12,46 +12,14 @@ interface EventCardBaseProps {
   height: number;
 }
 
-const titleAnimation = {
-  hidden: { opacity: 0.1, y: -25 },
-  show: {
-    opacity: 1,
-    y: 0,
-  },
-};
-const imageAnimation = {
-  hidden: { opacity: 0.1, x: -25 },
-  show: {
-    opacity: 1,
-    x: 0,
-  },
-};
-const shortTextAnimation = {
-  hidden: { opacity: 0.1, x: 25 },
-  show: {
-    opacity: 1,
-    x: 0,
-  },
-};
-const longTextAnimation = {
-  hidden: { opacity: 0.1, y: 25 },
-  show: {
-    opacity: 1,
-    y: 0,
-  },
-};
-const transition = {
-  duration: 0.25,
-};
-
-const EventCardBase: React.FC<EventCardBaseProps> = ({
+const EventCardBase = ({
   title,
   shortDescription,
   longDescription,
   imageURL,
   width,
   height,
-}) => {
+}: EventCardBaseProps) => {
   return (
     <motion.div
       className="h-200 mx-8 my-10 max-w-4xl rounded-2xl bg-white p-10 shadow-lg md:mx-auto"

@@ -1,12 +1,14 @@
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
-const Page = (props: {
+interface BoardProps {
   position: string;
   name: string;
   image: string;
   badge: string;
-}) => {
+}
+
+const Board = ({ position, name, image, badge }: BoardProps) => {
   const slidedownanimation = {
     hidden: { opacity: 0, y: -10 },
     show: {
@@ -25,14 +27,14 @@ const Page = (props: {
       >
         <div className="relative flex h-36 w-36 md:h-60 md:w-60 lg:h-72 lg:w-72">
           <Image
-            src={props.image}
+            src={image}
             alt="boardmember"
             width={144}
             height={144}
             className="h-full w-full rounded-full object-cover"
           />
           <Image
-            src={props.badge}
+            src={badge}
             alt="badge"
             width={52}
             height={52}
@@ -41,10 +43,10 @@ const Page = (props: {
         </div>
         <div className="mt-2 text-center">
           <div className="whitespace-nowrap font-songMyung text-2xl text-hsa-blue-100 md:text-4xl lg:text-3xl">
-            {props.name}
+            {name}
           </div>
           <div className="font-openSans text-base text-hsa-gray-300 md:text-xl lg:text-xl">
-            {props.position}
+            {position}
           </div>
         </div>
       </motion.div>
@@ -52,4 +54,4 @@ const Page = (props: {
   );
 };
 
-export default Page;
+export default Board;
