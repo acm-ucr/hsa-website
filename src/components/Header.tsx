@@ -2,7 +2,7 @@ import Image from "next/image";
 import * as motion from "motion/react-client";
 import hsa5 from "@/public/assets/hsa5.svg";
 
-type Props = {
+type HeaderProps = {
   title: string;
 };
 
@@ -21,7 +21,7 @@ const fadeIn = {
   visible: { opacity: 1, transition: { duration: 0.75 } },
 };
 
-const Header = ({ title }: Props) => {
+const Header = ({ title }: HeaderProps) => {
   return (
     <div className="relative flex flex-row justify-between overflow-hidden bg-hsa-gray-100 drop-shadow-xl">
       <motion.div
