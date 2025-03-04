@@ -9,14 +9,14 @@ interface EventCardBaseProps {
   height: number;
 }
 
-const EventCardBase: React.FC<EventCardBaseProps> = ({
+const EventCardBase = ({
   title,
   shortDescription,
   longDescription,
   imageURL,
   width,
   height,
-}) => {
+}: EventCardBaseProps) => {
   return (
     <div className="h-200 mx-8 my-10 max-w-4xl rounded-2xl bg-white p-10 shadow-lg md:mx-auto">
       <div className="mb-6 mt-2 text-center font-songMyung text-3xl font-medium text-hsa-blue-100 md:text-6xl">
