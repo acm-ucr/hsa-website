@@ -6,6 +6,16 @@ type Props = {
   title: string;
 };
 
+const fadeInFromTop = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
+const fadeInFromBottom = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
 const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.75 } },
@@ -18,7 +28,7 @@ const Header = ({ title }: Props) => {
         className="relative z-0 flex flex-row justify-center overflow-hidden"
         initial="hidden"
         animate="visible"
-        variants={fadeIn}
+        variants={fadeInFromBottom}
       >
         <Image src={hsa5} alt="HSA5" className="relative top-1/3 w-2/3" />
       </motion.div>
@@ -39,7 +49,7 @@ const Header = ({ title }: Props) => {
         className="flex flex-row justify-center overflow-hidden"
         initial="hidden"
         animate="visible"
-        variants={fadeIn}
+        variants={fadeInFromTop}
         transition={{ delay: 0.6 }}
       >
         <Image src={hsa5} alt="HSA5" className="relative bottom-1/3 w-2/3" />
