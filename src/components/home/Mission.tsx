@@ -1,5 +1,20 @@
 import hsa4 from "@/public/assets/hsa4.svg";
 import Image from "next/image";
+import * as motion from "motion/react-client";
+
+
+
+const animationX = {
+  hidden: { opacity: 0, x: -50 },
+  show: {
+    opacity: 1,
+    x: 0,
+  },
+};
+const transition = {
+  duration: 1.5,
+};
+
 
 const Mission = () => {
   return (
@@ -9,10 +24,19 @@ const Mission = () => {
           <div className="text-left font-songMyung text-5xl text-hsa-blue-100">
             Our Mission
           </div>
-          <div className="-ml-4 mr-5 p-5 text-left font-openSans text-xl font-semibold text-hsa-gray-300">
+        <div className="-ml-4 mr-5 p-5 text-left font-openSans text-xl font-semibold text-hsa-gray-300">
+          <motion.div
+                    variants={animationX}
+                    transition={{transition, delay: 0.2 }}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.1}}
+                  >
             Here at HSA @UCR, our mission is to spread knowledge of our history
             & culture, and to build a safe & uplifting Hmong community
+            </motion.div>
           </div>
+
         </div>
         <div className="relative flex">
           <Image src={hsa4} alt="HSA" className="w-3/4" />
