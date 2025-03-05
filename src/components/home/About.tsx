@@ -1,23 +1,6 @@
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
-// const animationY = {
-//   hidden: { opacity: 0, y: -50 },
-//   show: {
-//     opacity: 1,
-//     y: 0,
-//   },
-// };
-// const animationScale = {
-//   hidden: {
-//     opacity: 0,
-//     scale: 0.5,
-//   },
-//   show: {
-//     opacity: 1,
-//     scale: 1,
-//   },
-// };
 const animationX = {
   hidden: { opacity: 0, x: -50 },
   show: {
