@@ -1,6 +1,4 @@
 import Image from "next/image";
-
-// React
 import * as motion from "motion/react-client";
 
 const titleAnimation = {
