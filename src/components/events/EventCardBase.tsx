@@ -1,16 +1,5 @@
 import Image from "next/image";
-
-// React
 import * as motion from "motion/react-client";
-
-interface EventCardBaseProps {
-  title: string;
-  shortDescription: string;
-  longDescription: string;
-  imageURL: string;
-  width: number;
-  height: number;
-}
 
 const titleAnimation = {
   hidden: { opacity: 0.1, y: -25 },
@@ -44,14 +33,23 @@ const transition = {
   duration: 0.25,
 };
 
-const EventCardBase: React.FC<EventCardBaseProps> = ({
+interface EventCardBaseProps {
+  title: string;
+  shortDescription: string;
+  longDescription: string;
+  imageURL: string;
+  width: number;
+  height: number;
+}
+
+const EventCardBase = ({
   title,
   shortDescription,
   longDescription,
   imageURL,
   width,
   height,
-}) => {
+}: EventCardBaseProps) => {
   return (
     <motion.div
       className="h-200 mx-8 my-10 max-w-4xl rounded-2xl bg-white p-10 shadow-lg md:mx-auto"
