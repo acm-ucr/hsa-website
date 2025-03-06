@@ -103,7 +103,7 @@ function Calendar({
         table: "w-full border-collapse space-y-1",
         head_row: "flex h-14",
         head_cell:
-          "justify-center text-muted-foreground w-full font-songMyung text-md content-center uppercase border text-[#EFEFEF] bg-hsa-pink-200 bg-opacity-100", //this is so scuffed but for some reason text-hsa-gray-100 doesnt work
+          "justify-center w-full font-songMyung text-md content-center uppercase border text-[#EFEFEF] bg-hsa-pink-200 bg-opacity-100", //this is so scuffed but for some reason text-hsa-gray-100 doesnt work
         row: "flex w-full",
         cell: "w-full text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
