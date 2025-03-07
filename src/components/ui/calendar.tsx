@@ -44,9 +44,9 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
 
   return (
     <div
-      className={`${currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden w-full h-28 overflow-y-scroll`}
+      className={`${currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden h-28 w-full overflow-y-scroll`}
     >
-      <p className="text-xl sticky px-3 p-2 text-left font-songMyung">
+      <p className="sticky p-1 px-2 text-left font-songMyung text-xl">
         {date.getDate()}
       </p>
 
@@ -60,7 +60,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
         ) {
           return (
             <div
-              className="mb-0.5 mx-auto p-0.5 text-xs cursor-pointer bg-hsa-blue-100 text-center font-songMyung text-hsa-tan-100 hover:bg-opacity-100"
+              className="mx-auto mb-0.5 cursor-pointer bg-hsa-blue-100 p-0.5 text-center font-songMyung text-xs text-hsa-tan-100 hover:bg-opacity-100"
               key={index}
               onClick={() =>
                 setCurrent({ title, start, end, location, description })
@@ -94,8 +94,7 @@ function Calendar({
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
         month: "space-y-4 w-2/3 flex justify-center flex-col mx-auto",
         caption: "flex justify-center p-1 relative items-center",
-        caption_label:
-          "font-bold text-hsa-gray-300 font-songMyung text-2xl",
+        caption_label: "font-bold text-hsa-gray-300 font-songMyung text-2xl",
         nav: "space-x-1 flex items-center",
         nav_button: "h-7 w-7 bg-transparent p-0 hover:opacity-50",
         nav_button_previous: "absolute left-1/3",
@@ -125,19 +124,13 @@ function Calendar({
       components={{
         IconLeft: ({ className, ...props }) => (
           <MoveLeft
-            className={cn(
-              "h-5 w-5 font-songMyung text-black",
-              className,
-            )}
+            className={cn("h-5 w-5 font-songMyung text-black", className)}
             {...props}
           />
         ),
         IconRight: ({ className, ...props }) => (
           <MoveRight
-            className={cn(
-              "h-5 w-5 font-songMyung text-black",
-              className,
-            )}
+            className={cn("h-5 w-5 font-songMyung text-black", className)}
             {...props}
           />
         ),
