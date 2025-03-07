@@ -44,9 +44,9 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
 
   return (
     <div
-      className={`${currentMonth ? "text-hsa-gray-300" : "text-hsa-gray-200"} scrollbar-hidden h-24 overflow-y-scroll border`}
+      className={`${currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden w-full h-28 overflow-y-scroll`}
     >
-      <p className="text-md sticky px-2 text-right font-songMyung">
+      <p className="text-xl sticky px-3 p-2 text-left font-songMyung">
         {date.getDate()}
       </p>
 
@@ -60,7 +60,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
         ) {
           return (
             <div
-              className="my-1 cursor-pointer text-ellipsis bg-hsa-blue-100 bg-opacity-75 p-1 text-center font-songMyung text-hsa-tan-100 hover:bg-opacity-100"
+              className="mb-0.5 mx-auto p-0.5 text-xs cursor-pointer bg-hsa-blue-100 text-center font-songMyung text-hsa-tan-100 hover:bg-opacity-100"
               key={index}
               onClick={() =>
                 setCurrent({ title, start, end, location, description })
@@ -89,26 +89,26 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn("rounded-none border-none bg-hsa-gray-100 p-3", className)}
+      className={cn("rounded-none border-none p-3", className)}
       classNames={{
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
         month: "space-y-4 w-2/3 flex justify-center flex-col mx-auto",
         caption: "flex justify-center p-1 relative items-center",
         caption_label:
-          "text-md font-bold text-hsa-gray-300 font-songMyung text-xl",
+          "font-bold text-hsa-gray-300 font-songMyung text-2xl",
         nav: "space-x-1 flex items-center",
-        nav_button: "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100",
+        nav_button: "h-7 w-7 bg-transparent p-0 hover:opacity-50",
         nav_button_previous: "absolute left-1/3",
         nav_button_next: "absolute right-1/3",
         table: "w-full border-collapse space-y-1",
         head_row: "flex h-14",
         head_cell:
-          "justify-center text-muted-foreground w-full font-songMyung text-md content-center uppercase border text-[#EFEFEF] bg-hsa-pink-200 bg-opacity-100", //this is so scuffed but for some reason text-hsa-gray-100 doesnt work
+          "justify-center text-muted-foreground w-full font-songMyung text-lg font-light content-center uppercase border-none m-0.5 text-white bg-hsa-pink-200 bg-opacity-100",
         row: "flex w-full",
-        cell: "w-full text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "w-full m-0.5 border-none text-xl p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "w-full p-0 font-songMyung aria-selected:opacity-100 rounded-none border",
+          "w-full p-0 font-songMyung aria-selected:opacity-100 border-none rounded-none",
         ),
         day_range_end: "day-range-end",
         day_selected:
@@ -126,7 +126,7 @@ function Calendar({
         IconLeft: ({ className, ...props }) => (
           <MoveLeft
             className={cn(
-              "h-5 w-5 font-songMyung text-hsa-gray-300",
+              "h-5 w-5 font-songMyung text-black",
               className,
             )}
             {...props}
@@ -135,7 +135,7 @@ function Calendar({
         IconRight: ({ className, ...props }) => (
           <MoveRight
             className={cn(
-              "h-5 w-5 font-songMyung text-hsa-gray-300",
+              "h-5 w-5 font-songMyung text-black",
               className,
             )}
             {...props}
