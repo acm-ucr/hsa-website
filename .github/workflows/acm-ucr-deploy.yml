@@ -39,7 +39,7 @@ jobs:
           path: ./out
     env:
       NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY: ${{secrets.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}}
-      NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL: ${{secrets.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL}}
+      NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL: ${{secrets.NEXT_PUBLIC_GOOGLE_CALENDAR}}
 
   deploy:
     runs-on: ubuntu-latest

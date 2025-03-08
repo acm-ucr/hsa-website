@@ -2,9 +2,9 @@ import Image from "next/image";
 import * as motion from "motion/react-client";
 import hsa5 from "@/public/assets/hsa5.svg";
 
-type HeaderProps = {
+interface HeaderProps {
   title: string;
-};
+}
 
 const fadeInFromTop = {
   hidden: { opacity: 0, y: -50 },
