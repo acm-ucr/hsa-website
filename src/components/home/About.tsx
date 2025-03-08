@@ -14,7 +14,7 @@ const transition = {
 
 const About = () => {
   return (
-    <div>
+    <>
       <div className="flex flex-col items-center justify-center md:flex-row">
         <motion.div
           className="my-10 flex flex-col items-center text-center md:ml-12"
@@ -64,7 +64,7 @@ const About = () => {
       </div>
 
       <div className="h-10 bg-hsa-pink-200 shadow-md" />
-    </div>
+    </>
   );
 };
 
