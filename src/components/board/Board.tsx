@@ -1,10 +1,11 @@
 import Image from "next/image";
 import * as motion from "motion/react-client";
+import { StaticImageData } from "next/image";
 
 interface BoardProps {
   position: string;
   name: string;
-  image: string;
+  image: StaticImageData;
   badge: string;
 }
 
