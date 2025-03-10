@@ -1,6 +1,47 @@
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
+const titleAnimation = {
+  hidden: { opacity: 0.1, y: -25 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const imageAnimation = {
+  hidden: { opacity: 0.1, x: -25 },
+  show: {
+    opacity: 1,
+    x: 0,
+  },
+};
+const shortTextAnimation = {
+  hidden: { opacity: 0.1, x: 25 },
+  show: {
+    opacity: 1,
+    x: 0,
+  },
+};
+const longTextAnimation = {
+  hidden: { opacity: 0.1, y: 25 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const transition = {
+  duration: 0.25,
+};
+
+interface EventCardBaseProps {
+  title: string;
+  shortDescription: string;
+  longDescription: string;
+  imageURL: string;
+  width: number;
+  height: number;
+}
+
 const EventCardBase = ({
   title,
   shortDescription,
@@ -8,7 +49,6 @@ const EventCardBase = ({
   imageURL,
   width,
   height,
-}: EventCardBaseProps) => {
 }: EventCardBaseProps) => {
   return (
     <motion.div
