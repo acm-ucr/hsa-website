@@ -5,7 +5,7 @@ import Image from "next/image";
 import HSAlogo from "@/public/assets/HSAlogo.svg";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu } from 'lucide-react';
+import { Menu } from "lucide-react";
 
 const Navigation = () => {
   const pathName = usePathname();
