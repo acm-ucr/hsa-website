@@ -52,9 +52,9 @@ const Navigation = () => {
       </div>
 
       <div
-        className={`lg:hidden absolute left-0 top-16 w-full bg-hsa-pink-200 px-6 py-10 text-hsa-tan-100 z-50 shadow-lg ${
+        className={`absolute left-0 top-16 z-50 w-full bg-hsa-pink-200 px-6 py-10 text-hsa-tan-100 shadow-lg lg:hidden ${
           isMobileMenuOpen ? "block" : "hidden"
-        }`} 
+        }`}
       >
         {tags.map(({ link, name }) => (
           <div key={link} className="py-2 text-center">
