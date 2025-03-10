@@ -86,7 +86,7 @@ const Events = () => {
         </Dialog>
       )}
       {!isPending && (
-        <div className="my-6">
+        <div className="mx-2 my-6 mr-4">
           {data.slice(0, 2).map((event: EventProps) => (
             <EventCard
               key={event.start}
@@ -99,7 +99,7 @@ const Events = () => {
           ))}
         </div>
       )}
-      <div className="mb-8 bg-hsa-tan-200">
+      <div className="mx-auto my-4 flex w-full bg-hsa-tan-200 pb-12 pt-4">
         <Calendar
           mode="single"
           selected={new Date()}
