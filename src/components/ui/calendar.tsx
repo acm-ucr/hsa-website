@@ -40,40 +40,55 @@ interface DayProps {
 }
 
 const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
+  const today = new Date();
+
   const currentMonth = displayMonth.getMonth() === date.getMonth();
+  const filteredEvents = events?.filter(({ start, end }) => {
+    if (!start || !end) return false;
+    const eventStartDate = new Date(start);
+    const eventEndDate = new Date(end);
+
+    eventStartDate.setHours(0, 0, 0, 0);
+    eventEndDate.setHours(23, 59, 59, 999);
+
+    return (
+      date >= eventStartDate && date <= eventEndDate && eventEndDate >= today
+    );
+  });
 
   return (
     <div
-      className={`${currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden h-28 w-full overflow-y-scroll`}
+      className={`${currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden flex h-28 w-full flex-col overflow-y-scroll`}
     >
-      <p className="sticky p-1 px-2 text-left font-songMyung text-xl">
+      <p
+        className={`${currentMonth ? "" : "opacity-80"} text-fit sticky p-1 px-2 text-left font-songMyung md:text-xl`}
+      >
         {date.getDate()}
       </p>
 
-      {events?.map(({ title, start, end, location, description }, index) => {
-        const startDate = new Date(start as string);
+      {filteredEvents?.map(
+        ({ title, start, end, location, description }, index) => {
+          const startDate = new Date(start as string);
 
-        if (
-          startDate.getDate() === date.getDate() &&
-          startDate.getMonth() === date.getMonth() &&
-          startDate.getFullYear() === date.getFullYear()
-        ) {
-          return (
-            <div
-              className="mx-auto mb-0.5 cursor-pointer bg-hsa-blue-100 p-0.5 text-center font-songMyung text-xs text-hsa-tan-100 hover:bg-opacity-100"
-              key={index}
-              onClick={() =>
-                setCurrent({ title, start, end, location, description })
-              }
-            >
-              {startDate.getHours() < 12
-                ? (startDate.getHours() % 12) + "am"
-                : (startDate.getHours() % 12) + "pm"}{" "}
-              {title}
-            </div>
-          );
-        }
-      })}
+          if (
+            startDate.getDate() === date.getDate() &&
+            startDate.getMonth() === date.getMonth() &&
+            startDate.getFullYear() === date.getFullYear()
+          ) {
+            return (
+              <div
+                className="mx-auto mb-0.5 flex w-full cursor-pointer bg-hsa-blue-100 p-0.5 text-center text-xs font-medium text-hsa-tan-100 transition hover:bg-opacity-100 hover:opacity-60"
+                key={index}
+                onClick={() =>
+                  setCurrent({ title, start, end, location, description })
+                }
+              >
+                <span className="h-4 w-full overflow-hidden">{title}</span>
+              </div>
+            );
+          }
+        },
+      )}
     </div>
   );
 };
@@ -89,25 +104,27 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn("rounded-none border-none p-3", className)}
+      className={cn("rounded-none border-none", className)}
       classNames={{
-        months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
-        month: "space-y-4 w-2/3 flex justify-center flex-col mx-auto",
+        months:
+          "w-full flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
+        month:
+          "space-y-4 w-2/3 flex justify-center flex-col px-4 md:px-0 mx-auto overflow-x-auto",
         caption: "flex justify-center p-1 relative items-center",
         caption_label: "font-bold text-hsa-gray-300 font-songMyung text-2xl",
         nav: "space-x-1 flex items-center",
         nav_button: "h-7 w-7 bg-transparent p-0 hover:opacity-50",
-        nav_button_previous: "absolute left-1/3",
-        nav_button_next: "absolute right-1/3",
+        nav_button_previous: "absolute md:left-1/3 left-0",
+        nav_button_next: "absolute md:right-1/3 right-0",
         table: "w-full border-collapse space-y-1",
-        head_row: "flex h-14",
+        head_row: "flex h-14 ",
         head_cell:
-          "justify-center text-muted-foreground w-full font-songMyung text-lg font-light content-center uppercase border-none m-0.5 text-white bg-hsa-pink-200 bg-opacity-100",
+          "w-full text-sm justify-center text-muted-foreground w-full font-songMyung md:text-lg font-light content-center uppercase border-none m-0.5 text-white bg-hsa-pink-200 bg-opacity-100",
         row: "flex w-full",
-        cell: "w-full m-0.5 border-none text-xl p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "w-full m-0.5 flex border-none text-fit md:text-xl p-0 overflow-hidden relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "w-full p-0 font-songMyung aria-selected:opacity-100 border-none rounded-none",
+          "p-0 font-songMyung aria-selected:opacity-100 border-none rounded-none",
         ),
         day_range_end: "day-range-end",
         day_selected:
@@ -124,13 +141,13 @@ function Calendar({
       components={{
         IconLeft: ({ className, ...props }) => (
           <MoveLeft
-            className={cn("h-5 w-5 font-songMyung text-black", className)}
+            className={cn("h-8 w-8 text-black", className)}
             {...props}
           />
         ),
         IconRight: ({ className, ...props }) => (
           <MoveRight
-            className={cn("h-5 w-5 font-songMyung text-black", className)}
+            className={cn("h-8 w-8 text-black", className)}
             {...props}
           />
         ),
