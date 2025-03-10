@@ -11,6 +11,17 @@ const EventCard = ({ title, location, start, description }: EventProps) => {
     hour: "2-digit",
     minute: "2-digit",
   });
+import { EventProps } from "../ui/calendar";
+
+const EventCard = ({ title, location, start, description }: EventProps) => {
+  const date = new Date(start as string).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+  });
+  const time = new Date(start as string).toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   return (
     <div className="m-4 mx-auto flex w-full max-w-6xl flex-col gap-6 rounded-3xl bg-white p-6 text-hsa-gray-300 shadow-md shadow-gray-500 md:flex-row">
       <div className="flex flex-col items-center justify-center p-4 text-center font-songMyung">

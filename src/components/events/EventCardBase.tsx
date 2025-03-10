@@ -1,15 +1,6 @@
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
-interface EventCardBaseProps {
-  title: string;
-  shortDescription: string;
-  longDescription: string;
-  imageURL: string;
-  width: number;
-  height: number;
-}
-
 const EventCardBase = ({
   title,
   shortDescription,
@@ -17,6 +8,7 @@ const EventCardBase = ({
   imageURL,
   width,
   height,
+}: EventCardBaseProps) => {
 }: EventCardBaseProps) => {
   return (
     <motion.div
