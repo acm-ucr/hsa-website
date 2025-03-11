@@ -28,9 +28,15 @@ const Mission = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 0.75, delay: 0.2 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex flex-col items-center"
+        >
           <Image src={hsa4} alt="HSA" className="w-1/4 md:w-3/4" />
-        </div>
+        </motion.div>
       </div>
       <div className="h-8 max-w-full bg-hsa-green-100 shadow-md" />
     </>
