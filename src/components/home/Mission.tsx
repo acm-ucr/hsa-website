@@ -9,16 +9,18 @@ const Mission = () => {
         <div className="text-center font-songMyung text-5xl text-hsa-blue-100 md:text-left">
           <motion.div
             initial={{ opacity: 0, x: -75 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.75, delay: 0.2 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             Our Mission
           </motion.div>
           <div className="-ml-4 p-5 text-center font-openSans text-xl font-semibold text-hsa-gray-300 md:text-left">
             <motion.div
               initial={{ opacity: 0, x: -75 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               Here at HSA @UCR, our mission is to spread knowledge of our
               history & culture, and to build a safe & uplifting Hmong community
