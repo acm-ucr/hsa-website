@@ -85,20 +85,34 @@ const Events = () => {
           </DialogContent>
         </Dialog>
       )}
-      {!isPending && (
-        <div className="mx-2 my-6 mr-4">
-          {data.slice(0, 2).map((event: EventProps) => (
-            <EventCard
-              key={event.start}
-              start={event.start}
-              end={event.end}
-              location={event.location}
-              description={event.description}
-              title={event.title}
-            />
-          ))}
-        </div>
-      )}
+      <div className="mx-2 my-6 mr-4">
+        {isPending ? (
+          <div className="mx-auto my-32 w-full text-center font-songMyung text-4xl">
+            Loading upcoming events...
+          </div>
+        ) : (
+          <>
+            {data ? (
+              data
+                ?.slice(0, 2)
+                .map((event: EventProps) => (
+                  <EventCard
+                    key={event.start}
+                    start={event.start}
+                    end={event.end}
+                    location={event.location}
+                    description={event.description}
+                    title={event.title}
+                  />
+                ))
+            ) : (
+              <div className="mx-auto my-32 w-full text-center font-songMyung text-4xl">
+                No upcoming events!
+              </div>
+            )}
+          </>
+        )}
+      </div>
       <div className="mx-auto my-4 flex w-full bg-hsa-tan-200 pb-12 pt-4">
         <Calendar
           mode="single"
