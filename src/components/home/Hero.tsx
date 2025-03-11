@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <>
+    <div>
       <div className="flex flex-col items-center py-[7%]">
         <HeroCard />
         <Link
@@ -14,6 +14,7 @@ const Hero = () => {
         </Link>
       </div>
       <div className="mb-5 max-w-full bg-hsa-yellow-100 p-4 shadow-md" />
+    </div>
   );
 };
 
