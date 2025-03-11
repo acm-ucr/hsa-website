@@ -70,9 +70,6 @@ const About = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       />
-      </div>
-
-      <div className="h-10 bg-hsa-pink-200 shadow-md" />
     </>
   );
 };
