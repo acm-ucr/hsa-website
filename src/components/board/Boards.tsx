@@ -29,7 +29,7 @@ const Boards = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-6 md:hidden">
-        {board.slice(0, 3).map(({ position, name, image, badge }, index) => (
+        {board.slice(0, 4).map(({ position, name, image, badge }, index) => (
           <Board
             key={index}
             position={position}
