@@ -1,26 +1,47 @@
 import Image from "next/image";
+import * as motion from "motion/react-client";
 import hsa8 from "@/public/assets/hsa8.svg";
 import hsa9 from "@/public/assets/hsa9.svg";
 import Link from "next/link";
 
+const fadeInFromLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.1 } },
+};
+
+const fadeInFromRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.1 } },
+};
+
 const NotFound = () => {
   return (
     <div className="grid flex-grow grid-cols-3">
-      <div className="flex items-start justify-start">
+      <motion.div initial="hidden" animate="visible" variants={fadeInFromLeft}>
         <Image
           src={hsa8}
           alt="Gallery 2"
           className="mt-[10%] object-scale-down"
         />
-      </div>
+      </motion.div>
 
       <div className="flex flex-col items-center justify-center">
-        <p className="font-songMyung text-9xl font-semibold text-hsa-blue-100">
+        <motion.p
+          className="font-songMyung text-9xl font-semibold text-hsa-blue-100"
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           404
-        </p>
-        <p className="font-lightweight pt-3 font-sans text-xl text-hsa-gray-300">
+        </motion.p>
+        <motion.p
+          className="font-lightweight pt-3 font-sans text-hsa-gray-300 md:text-base lg:text-xl"
+          initial={{ y: -25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           page not found!
-        </p>
+        </motion.p>
         <Link
           href="/"
           className="mt-[5%] rounded-full bg-hsa-green-100 px-12 py-3 font-sans font-bold text-white hover:bg-hsa-green-100"
@@ -30,11 +51,17 @@ const NotFound = () => {
       </div>
 
       <div className="flex items-end justify-end">
-        <Image
-          src={hsa9}
-          alt="Gallery 2"
-          className="mb-[10%] object-scale-down"
-        />
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInFromRight}
+        >
+          <Image
+            src={hsa9}
+            alt="Gallery 2"
+            className="mb-[10%] object-scale-down"
+          />
+        </motion.div>
       </div>
     </div>
   );
