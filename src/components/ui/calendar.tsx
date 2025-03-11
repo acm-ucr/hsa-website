@@ -6,6 +6,25 @@ import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./button";
+import * as motion from "motion/react-client";
+
+const slideUp = {
+  hidden: { opacity: 0, y: 5 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const slideDown = {
+  hidden: { opacity: 0, y: -5 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const transition = {
+  duration: 0.3,
+};
 
 export type GoogleEventProps = {
   start: {
@@ -41,7 +60,10 @@ interface DayProps {
 
 const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   const today = new Date();
-
+  const isToday =
+    today.getDate() === date.getDate() &&
+    today.getMonth() === date.getMonth() &&
+    today.getFullYear() === date.getFullYear();
   const currentMonth = displayMonth.getMonth() === date.getMonth();
   const filteredEvents = events?.filter(({ start, end }) => {
     if (!start || !end) return false;
@@ -57,11 +79,16 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   });
 
   return (
-    <div
-      className={`${currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden flex h-28 w-full flex-col overflow-y-scroll`}
+    <motion.div
+      variants={slideDown}
+      transition={{ ...transition, delay: 0.2 }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className={`${isToday ? "bg-hsa-blue-200" : currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden flex h-28 w-full flex-col overflow-y-scroll p-0.5`}
     >
       <p
-        className={`${currentMonth ? "" : "opacity-80"} text-fit sticky p-1 px-2 text-left font-songMyung md:text-xl`}
+        className={`${currentMonth ? "" : "opacity-80"} ${isToday && "font-bold text-white"} text-fit sticky m-1 px-1 text-center font-songMyung md:text-left md:text-xl`}
       >
         {date.getDate()}
       </p>
@@ -76,20 +103,27 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
             startDate.getFullYear() === date.getFullYear()
           ) {
             return (
-              <div
-                className="mx-auto mb-0.5 flex w-full cursor-pointer bg-hsa-blue-100 p-0.5 text-center text-xs font-medium text-hsa-tan-100 transition hover:bg-opacity-100 hover:opacity-60"
+              <motion.div
+                variants={slideUp}
+                transition={{ ...transition, delay: 0.2 }}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                className={`${isToday ? "bg-white text-hsa-blue-200" : "bg-hsa-blue-200 text-white"} mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:bg-opacity-100 hover:opacity-60`}
                 key={index}
                 onClick={() =>
                   setCurrent({ title, start, end, location, description })
                 }
               >
-                <span className="h-4 w-full overflow-hidden">{title}</span>
-              </div>
+                <span className="my-auto h-5 w-full truncate text-sm">
+                  {title}
+                </span>
+              </motion.div>
             );
           }
         },
       )}
-    </div>
+    </motion.div>
   );
 };
 
@@ -119,12 +153,12 @@ function Calendar({
         table: "w-full border-collapse space-y-1",
         head_row: "flex h-14 ",
         head_cell:
-          "w-full text-sm justify-center text-muted-foreground w-full font-songMyung md:text-lg font-light content-center uppercase border-none m-0.5 text-white bg-hsa-pink-200 bg-opacity-100",
+          "w-full text-sm justify-center text-muted-foreground w-full font-songMyung md:text-lg font-light content-center uppercase border-none m-[1px] md:m-0.5 text-white bg-hsa-pink-200 bg-opacity-100",
         row: "flex w-full",
-        cell: "w-full m-0.5 flex border-none text-fit md:text-xl p-0 overflow-hidden relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+        cell: "w-full m-[1px] md:m-0.5 flex border-none text-fit md:text-xl p-0 overflow-hidden relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          "p-0 font-songMyung aria-selected:opacity-100 border-none rounded-none",
+          "font-songMyung aria-selected:opacity-100 border-none rounded-none",
         ),
         day_range_end: "day-range-end",
         day_selected:
