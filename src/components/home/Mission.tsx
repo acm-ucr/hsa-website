@@ -2,17 +2,6 @@ import hsa4 from "@/public/assets/hsa4.svg";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
-const animationX = {
-  hidden: { opacity: 0, x: -50 },
-  show: {
-    opacity: 1,
-    x: 0,
-  },
-};
-const transition = {
-  duration: 1.5,
-};
-
 const Mission = () => {
   return (
     <>
@@ -23,11 +12,9 @@ const Mission = () => {
           </div>
           <div className="-ml-4 mr-5 p-5 text-left font-openSans text-xl font-semibold text-hsa-gray-300">
             <motion.div
-              variants={animationX}
-              transition={{ transition, delay: 0.2 }}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.1 }}
+              initial={{ opacity: 0, x: -100}}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2, delay: 0.5 }}  
             >
               Here at HSA @UCR, our mission is to spread knowledge of our
               history & culture, and to build a safe & uplifting Hmong community
