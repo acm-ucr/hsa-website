@@ -1,5 +1,6 @@
 import hsa4 from "@/public/assets/hsa4.svg";
 import Image from "next/image";
+import * as motion from "motion/react-client";
 
 const Mission = () => {
   return (
@@ -18,7 +19,13 @@ const Mission = () => {
           <Image src={hsa4} alt="HSA" className="w-3/4" />
         </div>
       </div>
-      <div className="h-8 max-w-full bg-hsa-green-100 shadow-md" />
+      <motion.div
+        className="mb-5 h-10 max-w-full bg-hsa-green-100 p-4"
+        initial={{ opacity: 0, width: 0 }}
+        whileInView={{ opacity: 1, width: "100%" }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
     </>
   );
 };

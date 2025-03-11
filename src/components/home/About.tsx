@@ -62,8 +62,13 @@ const About = () => {
           </p>
         </div>
       </div>
-
-      <div className="h-10 bg-hsa-pink-200 shadow-md" />
+      <motion.div
+        className="mb-5 h-10 max-w-full bg-hsa-pink-200 p-4 ml-auto"
+        initial={{ opacity: 0, width: 0 }}
+        whileInView={{ opacity: 1, width: "100%" }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
     </div>
   );
 };
