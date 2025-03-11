@@ -5,7 +5,7 @@ import * as motion from "motion/react-client";
 const Mission = () => {
   return (
     <>
-      <div className="my-5 flex w-full flex-col justify-between p-12 md:flex-row">
+      <div className="my-5 flex w-full max-w-full flex-col justify-center p-12 md:flex-row">
         <div className="text-center font-songMyung text-5xl text-hsa-blue-100 md:text-left">
           <motion.div
             initial={{ opacity: 0, x: -75 }}
@@ -15,7 +15,7 @@ const Mission = () => {
           >
             Our Mission
           </motion.div>
-          <div className="-ml-4 p-5 text-center font-openSans text-xl font-semibold text-hsa-gray-300 md:text-left">
+          <div className="pb-5 pt-5 text-center font-openSans text-2xl font-semibold text-hsa-gray-300 md:text-left md:text-xl">
             <motion.div
               initial={{ opacity: 0, x: -75 }}
               whileInView={{ opacity: 1, x: 0 }}
