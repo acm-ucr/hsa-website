@@ -32,12 +32,14 @@ const EventCard = ({ title, location, start, description }: EventProps) => {
         />
       </div>
       <div className="mx-auto h-2 w-8/12 rounded-xl bg-hsa-pink-400 md:h-auto md:w-4" />
-      <div className="my-auto flex flex-col gap-2 p-4 text-center md:w-2/3 md:text-left">
+      <div className="my-auto flex flex-col gap-2 p-4 text-center md:w-5/6 md:text-left">
         <div className="font-songMyung text-3xl md:text-5xl">{title}</div>
         <div className="text-lg font-semibold md:text-xl">
           Location: {location}
         </div>
-        <div className="p-2 pl-0 text-lg md:text-xl">{description}</div>
+        <div className="overflow-y-auto p-2 pl-0 text-lg md:text-xl">
+          {description}
+        </div>
       </div>
     </div>
   );
