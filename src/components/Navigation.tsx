@@ -17,7 +17,7 @@ const Navigation = () => {
 
   return (
     <nav className="bg-hsa-pink-200 font-serif">
-      <div className="flex items-center justify-between px-4 py-4 lg:hidden md:hidden">
+      <div className="flex items-center justify-between px-4 py-4 md:hidden lg:hidden">
         <Link href="/" className="flex items-center gap-[1vw]">
           <Image src={HSAlogo} alt="logo" className="w-12" />
           <div className="text-[3vw] sm:text-[2vw]">HSA</div>
@@ -27,7 +27,7 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div className="hidden justify-between py-4 text-hsa-tan-100 lg:flex md:flex">
+      <div className="hidden justify-between py-4 text-hsa-tan-100 md:flex lg:flex">
         <Link href="/" className="ml-[4%] flex items-center gap-[1vw]">
           <Image src={HSAlogo} alt="logo" className="w-12" />
           <div className="text-[3vw] sm:text-[2vw]">HSA</div>
@@ -52,7 +52,7 @@ const Navigation = () => {
       </div>
 
       <div
-        className={`absolute left-0 top-20 z-50 w-full text-3xl bg-hsa-pink-200 px-6 py-10 text-hsa-tan-100 shadow-lg lg:hidden md:hidden ${
+        className={`absolute left-0 top-20 z-50 w-full bg-hsa-pink-200 px-6 py-10 text-3xl text-hsa-tan-100 shadow-lg md:hidden lg:hidden ${
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
