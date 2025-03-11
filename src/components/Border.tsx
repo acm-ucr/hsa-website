@@ -4,7 +4,7 @@ import border from "@/public/assets/border.svg";
 const Border = () => {
   return (
     <div className="mb-5 w-full overflow-hidden">
-      <div className="flex w-full justify-center gap-x-2">
+      <div className="flex w-full justify-center gap-x-1 md:gap-x-2 lg:gap-x-5">
         {[...Array(2)].map((_, index) => (
           <Image
             key={index}
