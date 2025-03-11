@@ -63,7 +63,7 @@ const About = () => {
         </div>
       </div>
       <motion.div
-        className="mb-5 h-10 max-w-full bg-hsa-pink-200 p-4 ml-auto"
+        className="mb-5 ml-auto h-10 max-w-full bg-hsa-pink-200 p-4"
         initial={{ opacity: 0, width: 0 }}
         whileInView={{ opacity: 1, width: "100%" }}
         viewport={{ once: true, amount: 0.5 }}
