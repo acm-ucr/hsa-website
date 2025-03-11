@@ -52,7 +52,7 @@ const Navigation = () => {
       </div>
 
       <div
-        className={`absolute left-0 top-20 z-50 w-full bg-hsa-pink-200 px-6 py-10 text-3xl text-hsa-tan-100 shadow-lg md:hidden lg:hidden ${
+        className={`absolute left-0 top-20 z-50 w-full bg-hsa-pink-200 px-6 py-10 text-2xl text-hsa-tan-100 shadow-lg md:hidden lg:hidden ${
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
