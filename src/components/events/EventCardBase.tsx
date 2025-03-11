@@ -73,7 +73,7 @@ const EventCardBase = ({
           <Image src={imageURL} width={width} height={height} alt="" />
         </motion.div>
         <motion.p
-          className="flex-1 pt-2 font-openSans text-center md:text-left text-base font-medium text-gray-700 md:text-xl"
+          className="flex-1 pt-2 text-center font-openSans text-base font-medium text-gray-700 md:text-left md:text-xl"
           variants={shortTextAnimation}
           transition={{ ...transition, delay: 0.5 }}
         >
@@ -81,7 +81,7 @@ const EventCardBase = ({
         </motion.p>
       </div>
       <motion.p
-        className="mt-6 font-openSans text-base text-center md:text-left font-medium text-gray-700 md:ml-2 md:mr-16 md:text-xl"
+        className="mt-6 text-center font-openSans text-base font-medium text-gray-700 md:ml-2 md:mr-16 md:text-left md:text-xl"
         variants={longTextAnimation}
         transition={{ ...transition, delay: 0.5 }}
       >
