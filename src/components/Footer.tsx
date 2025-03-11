@@ -17,6 +17,7 @@ const Footer = () => {
 
         <div className="flex place-content-center font-openSans text-xl font-semibold text-white">
           <p className="mr-3 flex">Contact Us!</p>
+
           {footers.map(({ link, icon }, index) => (
             <Link
               key={index}

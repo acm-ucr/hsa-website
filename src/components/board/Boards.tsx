@@ -4,7 +4,7 @@ import Board from "@/components/board/Board";
 const Boards = () => {
   return (
     <div className="flex flex-col items-center bg-hsa-tan-100 p-5 font-songMyung">
-      <div className="hidden w-full justify-center gap-20 md:flex">
+      <div className="mt-6 hidden w-full justify-center gap-20 md:flex">
         {board.slice(0, 3).map(({ position, name, image, badge }, index) => (
           <Board
             key={index}
@@ -29,7 +29,7 @@ const Boards = () => {
       </div>
 
       <div className="grid grid-cols-2 gap-6 md:hidden">
-        {board.slice(0, 3).map(({ position, name, image, badge }, index) => (
+        {board.slice(0, 4).map(({ position, name, image, badge }, index) => (
           <Board
             key={index}
             position={position}
