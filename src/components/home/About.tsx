@@ -14,7 +14,7 @@ const transition = {
 
 const About = () => {
   return (
-    <div>
+    <>
       <div className="flex flex-col items-center justify-center md:flex-row">
         <motion.div
           className="my-10 flex flex-col items-center text-center md:ml-12"
@@ -55,13 +55,14 @@ const About = () => {
           <div className="font-songMyung text-5xl text-hsa-blue-100">
             About Us
           </div>
-          <p className="mt-4 flex font-openSans text-xl font-semibold text-hsa-gray-300">
+          <p className="flex p-5 font-openSans text-2xl font-semibold text-hsa-gray-300 md:mt-4 md:p-0 md:text-xl">
             HSA @ UCR is one of the few Hmong Student Associations in Southern
             California. We strive to be a "home away from home" for all
             students, whatever their background or identity.
           </p>
         </div>
       </div>
+
       <motion.div
         className="mb-5 ml-auto h-10 max-w-full bg-hsa-pink-200 p-4"
         initial={{ opacity: 0, width: 0 }}
@@ -69,7 +70,10 @@ const About = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       />
-    </div>
+      </div>
+
+      <div className="h-10 bg-hsa-pink-200 shadow-md" />
+    </>
   );
 };
 
