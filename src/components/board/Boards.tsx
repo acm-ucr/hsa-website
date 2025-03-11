@@ -4,7 +4,7 @@ import Board from "@/components/board/Board";
 const Boards = () => {
   return (
     <div className="flex flex-col items-center bg-hsa-tan-100 p-5 font-songMyung">
-      <div className="hidden w-full justify-center gap-20 mt-6 md:flex">
+      <div className="mt-6 hidden w-full justify-center gap-20 md:flex">
         {board.slice(0, 3).map(({ position, name, image, badge }, index) => (
           <Board
             key={index}
