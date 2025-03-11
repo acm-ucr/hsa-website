@@ -1,27 +1,20 @@
 import HeroCard from "./HeroCard";
-import JoinButton from "./JoinButton";
-import Image from "next/image";
-import hero from "@/public/assets/hero.svg";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="">
-      <div className="relative mx-auto w-2/5">
-        <Image
-          className="absolute -bottom-60 -left-40 z-10 transform"
-          src={hero}
-          alt="hero border component"
-        />
-        <Image
-          className="absolute -right-44 -top-4 z-10 scale-x-[-1] scale-y-[-1] transform"
-          src={hero}
-          alt="hero border component"
-        />
+    <>
+      <div className="flex flex-col items-center py-[7%]">
+        <HeroCard />
+        <Link
+          className="mt-[3vw] w-[13vw] rounded-full bg-hsa-green-100 pb-3 pt-2 text-center text-[2vw] font-semibold text-white hover:bg-green-900 md:w-[10vw] md:text-[1.5vw]"
+          href="https://discord.gg/BMx92Z2bsY"
+        >
+          Join us!
+        </Link>
       </div>
-      <HeroCard />
-      <JoinButton />
-      <div className="mb-5 max-w-full bg-hsa-yellow-100 p-4 shadow-md"></div>
-    </div>
+      <div className="mb-5 max-w-full bg-hsa-yellow-100 p-4 shadow-md" />
+    </>
   );
 };
 
