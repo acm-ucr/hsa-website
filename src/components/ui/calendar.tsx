@@ -6,6 +6,25 @@ import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./button";
+import * as motion from "motion/react-client";
+
+const slideUp = {
+  hidden: { opacity: 0, y: 5 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const slideDown = {
+  hidden: { opacity: 0, y: -5 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+const transition = {
+  duration: 0.3,
+};
 
 export type GoogleEventProps = {
   start: {
@@ -41,7 +60,10 @@ interface DayProps {
 
 const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   const today = new Date();
-  const isToday = today.getDate() === date.getDate();
+  const isToday =
+    today.getDate() === date.getDate() &&
+    today.getMonth() === date.getMonth() &&
+    today.getFullYear() === date.getFullYear();
   const currentMonth = displayMonth.getMonth() === date.getMonth();
   const filteredEvents = events?.filter(({ start, end }) => {
     if (!start || !end) return false;
@@ -57,7 +79,12 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   });
 
   return (
-    <div
+    <motion.div
+      variants={slideDown}
+      transition={{ ...transition, delay: 0.2 }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
       className={`${isToday ? "bg-hsa-blue-200" : currentMonth ? "bg-white" : "bg-hsa-pink-100"} scrollbar-hidden flex h-28 w-full flex-col overflow-y-scroll p-0.5`}
     >
       <p
@@ -76,7 +103,12 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
             startDate.getFullYear() === date.getFullYear()
           ) {
             return (
-              <div
+              <motion.div
+                variants={slideUp}
+                transition={{ ...transition, delay: 0.2 }}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
                 className={`${isToday ? "bg-white text-hsa-blue-200" : "bg-hsa-blue-200 text-white"} mb-0.5 flex w-full cursor-pointer p-1 text-center font-medium transition hover:bg-opacity-100 hover:opacity-60`}
                 key={index}
                 onClick={() =>
@@ -86,12 +118,12 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
                 <span className="my-auto h-5 w-full truncate text-sm">
                   {title}
                 </span>
-              </div>
+              </motion.div>
             );
           }
         },
       )}
-    </div>
+    </motion.div>
   );
 };
 
