@@ -2,12 +2,17 @@ import Image from "next/image";
 import * as motion from "motion/react-client";
 
 const animationX = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, x: -100 },
   show: {
     opacity: 1,
     x: 0,
   },
 };
+const animationFade = {
+  hidden: { opacity: 0, y: -100 },
+  show: { opacity: 1, y: 0 },
+};
+
 const transition = {
   duration: 0.7,
 };
@@ -51,7 +56,14 @@ const About = () => {
             />
           </div>
         </motion.div>
-        <div className="my-5 flex w-full max-w-full flex-col justify-center px-4 text-center md:w-1/2 md:px-24 md:text-right">
+        <motion.div
+          className="my-5 flex w-full max-w-full flex-col justify-center px-4 text-center md:w-1/2 md:px-24 md:text-right"
+          variants={animationFade}
+          transition={{ ...transition, delay: 0.3 }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="font-songMyung text-5xl text-hsa-blue-100">
             About Us
           </div>
@@ -60,9 +72,8 @@ const About = () => {
             California. We strive to be a "home away from home" for all
             students, whatever their background or identity.
           </p>
-        </div>
+        </motion.div>
       </div>
-
       <div className="h-10 bg-hsa-pink-200 shadow-md" />
     </>
   );
