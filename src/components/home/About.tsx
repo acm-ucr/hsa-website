@@ -29,8 +29,9 @@ const About = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="mb-6 items-center">
+          <div className="mb-6">
             <Image
+              className="mx-auto w-3/4 md:w-full"
               src="/assets/hsa6.svg"
               width={320}
               height={320}
@@ -40,6 +41,7 @@ const About = () => {
 
           <div className="mb-6">
             <Image
+              className="mx-auto w-3/4"
               src="/hsaPeople.webp"
               width={450}
               height={280}
@@ -49,6 +51,7 @@ const About = () => {
 
           <div className="rotate-180">
             <Image
+              className="mx-auto w-3/4 md:w-full"
               src="/assets/hsa6.svg"
               width={320}
               height={320}
