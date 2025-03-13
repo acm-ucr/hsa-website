@@ -81,8 +81,7 @@ const About = () => {
         whileInView={{ opacity: 1, width: "100%" }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        
+      />
     </>
   );
 };
