@@ -4,6 +4,8 @@ import hsa8 from "@/public/assets/hsa8.svg";
 import hsa9 from "@/public/assets/hsa9.svg";
 import Link from "next/link";
 
+import Button from "@/components/Button";
+
 const fadeInFromLeft = {
   hidden: { opacity: 0, x: -60 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.1 } },
@@ -42,12 +44,7 @@ const NotFound = () => {
         >
           page not found!
         </motion.p>
-        <Link
-          href="/"
-          className="mt-[5%] rounded-full bg-hsa-green-100 px-12 py-3 font-sans font-bold text-white hover:bg-hsa-green-100"
-        >
-          home
-        </Link>
+        <Button label="Home" target="" link="/" />
       </div>
 
       <div className="flex items-end justify-end">
