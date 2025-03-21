@@ -38,7 +38,13 @@ const Mission = () => {
           <Image src={hsa4} alt="HSA" className="w-1/4 md:w-3/4" />
         </motion.div>
       </div>
-      <div className="h-8 max-w-full bg-hsa-green-100 shadow-md" />
+      <motion.div
+        className="mb-5 h-10 max-w-full bg-hsa-green-100 p-4"
+        initial={{ opacity: 0, width: 0 }}
+        whileInView={{ opacity: 1, width: "100%" }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
     </>
   );
 };
