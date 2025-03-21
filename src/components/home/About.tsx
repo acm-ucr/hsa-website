@@ -72,8 +72,17 @@ const About = () => {
           </div>
           <p className="flex p-5 font-openSans text-2xl font-semibold text-hsa-gray-300 md:mt-4 md:p-0 md:text-xl">
             HSA @ UCR is one of the few Hmong Student Associations in Southern
-            California. We strive to be a "home away from home" for all
-            students, whatever their background or identity.
+            California, dedicated to preserving and sharing Hmong culture while
+            fostering a sense of belonging for all students. We strive to be a
+            "home away from home," providing a welcoming and inclusive
+            environment where individuals from all backgrounds and identities
+            can feel supported and valued. Through social gatherings, cultural
+            workshops, academic support, and community outreach, we aim to
+            create meaningful connections and lifelong friendships. Whether you
+            are Hmong or simply interested in learning about our rich history
+            and traditions, HSA @ UCR is a place where you can grow, engage, and
+            celebrate diversity. Join us as we continue to build a strong and
+            vibrant community together!
           </p>
         </motion.div>
       </div>
