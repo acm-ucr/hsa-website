@@ -2,7 +2,6 @@ import Image from "next/image";
 import * as motion from "motion/react-client";
 import hsa8 from "@/public/assets/hsa8.svg";
 import hsa9 from "@/public/assets/hsa9.svg";
-import Link from "next/link";
 
 import Button from "@/components/Button";
 
