@@ -20,7 +20,7 @@ const Navigation = () => {
       <div className="flex items-center justify-between px-4 py-4 md:hidden lg:hidden">
         <Link href="/" className="flex items-center gap-[1vw]">
           <Image src={HSAlogo} alt="logo" className="w-12" />
-          <div className="text-[3vw] sm:text-[2vw]">HSA</div>
+          <div className="text-[3vw] text-white sm:text-[2vw]">HSA</div>
         </Link>
         <div className="py-4 text-hsa-gray-100" onClick={toggleMobileMenu}>
           <Menu />
