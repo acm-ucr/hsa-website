@@ -29,8 +29,9 @@ const About = () => {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="mb-6 items-center">
+          <div className="mb-6">
             <Image
+              className="mx-auto w-3/4 md:w-full"
               src="/assets/hsa6.svg"
               width={320}
               height={320}
@@ -40,6 +41,7 @@ const About = () => {
 
           <div className="mb-6">
             <Image
+              className="mx-auto w-3/4"
               src="/hsaPeople.webp"
               width={450}
               height={280}
@@ -49,6 +51,7 @@ const About = () => {
 
           <div className="rotate-180">
             <Image
+              className="mx-auto w-3/4 md:w-full"
               src="/assets/hsa6.svg"
               width={320}
               height={320}
@@ -74,7 +77,14 @@ const About = () => {
           </p>
         </motion.div>
       </div>
-      <div className="h-10 bg-hsa-pink-200 shadow-md" />
+
+      <motion.div
+        className="mb-5 ml-auto h-10 max-w-full bg-hsa-pink-200 p-4"
+        initial={{ opacity: 0, width: 0 }}
+        whileInView={{ opacity: 1, width: "100%" }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
     </>
   );
 };

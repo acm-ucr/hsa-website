@@ -20,7 +20,7 @@ const Hero = () => {
         />
       </motion.div>
       <motion.div
-        className="mb-5 max-w-full bg-hsa-yellow-100 p-4 shadow-md"
+        className="mb-5 h-10 max-w-full bg-hsa-yellow-100 p-4"
         initial={{ opacity: 0, width: 0 }}
         animate={{ opacity: 1, width: "100%" }}
         transition={{ duration: 0.8, delay: 0.7 }}
