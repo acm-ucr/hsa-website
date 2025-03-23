@@ -1,6 +1,4 @@
 import HeroCard from "./HeroCard";
-import Image from "next/image";
-import hero from "@/public/assets/hero.svg";
 import Button from "@/components/Button";
 import * as motion from "motion/react-client";
 
