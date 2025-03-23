@@ -55,7 +55,7 @@ const About = () => {
           />
         </motion.div>
 
-        <div className="w-[80%] text-center md:w-[40%] md:text-right items-right">
+        <div className="items-right w-[80%] text-center md:w-[40%] md:text-right">
           <p className="font-songMyung text-5xl text-hsa-blue-100">About Us</p>
           <p className="text-md my-4 mb-6 font-openSans font-semibold text-hsa-gray-300 md:text-lg">
             HSA @ UCR is dedicated to preserving Hmong culture and fostering a
@@ -80,7 +80,7 @@ const About = () => {
       </div>
 
       <motion.div
-        className="mb-5 ml-auto h-10 max-w-full shadow-md bg-hsa-pink-200 p-4"
+        className="mb-5 ml-auto h-10 max-w-full bg-hsa-pink-200 p-4 shadow-md"
         initial={{ opacity: 0, width: 0 }}
         whileInView={{ opacity: 1, width: "100%" }}
         viewport={{ once: true, amount: 0.5 }}

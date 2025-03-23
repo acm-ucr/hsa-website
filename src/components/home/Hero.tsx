@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div>
       <motion.div
-        className="flex flex-col items-center pt-[7%] pb-[4%]"
+        className="flex flex-col items-center pb-[4%] pt-[7%]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
