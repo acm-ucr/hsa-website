@@ -2,29 +2,25 @@ import HeroCard from "./HeroCard";
 import Image from "next/image";
 import hero from "@/public/assets/hero.svg";
 import Button from "@/components/Button";
+import * as motion from "motion/react-client";
 
 const Hero = () => {
   return (
-    <div className="">
-      <div className="relative mx-auto w-2/5">
-        <Image
-          className="absolute -bottom-60 -left-40 z-10 transform"
-          src={hero}
-          alt="hero border component"
+    <div>
+      <motion.div
+        className="flex flex-col items-center pt-[7%] pb-[4%]"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <HeroCard />
+        <Button
+          label="Join us!"
+          target="_blank"
+          link="https://discord.gg/BMx92Z2bsY"
         />
-        <Image
-          className="absolute -right-44 top-4 z-10 scale-x-[-1] scale-y-[-1] transform"
-          src={hero}
-          alt="hero border component"
-        />
-      </div>
-      <HeroCard />
-      <Button
-        label="Join Us!"
-        link="https://discord.gg/BMx92Z2bsY"
-        tab="_blank"
-      />
-      <div className="mt-10 max-w-full bg-hsa-yellow-100 p-4 shadow-md" />
+      </motion.div>
+      <div className="max-w-full bg-hsa-yellow-100 p-4 shadow-md" />
     </div>
   );
 };

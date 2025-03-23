@@ -3,12 +3,17 @@ import * as motion from "motion/react-client";
 import Button from "../Button";
 
 const animationX = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, x: -100 },
   show: {
     opacity: 1,
     x: 0,
   },
 };
+const animationFade = {
+  hidden: { opacity: 0, y: -100 },
+  show: { opacity: 1, y: 0 },
+};
+
 const transition = {
   duration: 0.7,
 };
@@ -50,7 +55,7 @@ const About = () => {
           />
         </motion.div>
 
-        <div className="w-[80%] text-center md:w-[40%] md:text-right">
+        <div className="w-[80%] text-center md:w-[40%] md:text-right items-right">
           <p className="font-songMyung text-5xl text-hsa-blue-100">About Us</p>
           <p className="text-md my-4 mb-6 font-openSans font-semibold text-hsa-gray-300 md:text-lg">
             HSA @ UCR is dedicated to preserving Hmong culture and fostering a
@@ -64,16 +69,23 @@ const About = () => {
             UCR is a place to grow, engage, and celebrate diversity. Join us as
             we continue to build a strong and vibrant community together!
           </p>
-
-          <Button
-            label="Join Us!"
-            link="https://discord.gg/BMx92Z2bsY"
-            tab="_blank"
-          />
+          <div className="flex justify-end">
+            <Button
+              label="Join Us!"
+              link="https://discord.gg/BMx92Z2bsY"
+              target="_blank"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="h-10 bg-hsa-pink-200 shadow-md" />
+      <motion.div
+        className="mb-5 ml-auto h-10 max-w-full shadow-md bg-hsa-pink-200 p-4"
+        initial={{ opacity: 0, width: 0 }}
+        whileInView={{ opacity: 1, width: "100%" }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
     </>
   );
 };
