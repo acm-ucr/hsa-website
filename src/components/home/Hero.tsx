@@ -1,7 +1,7 @@
 import HeroCard from "./HeroCard";
 import Image from "next/image";
 import hero from "@/public/assets/hero.svg";
-import Link from "next/link";
+import Button from "@/components/Button";
 
 const Hero = () => {
   return (
@@ -19,10 +19,12 @@ const Hero = () => {
         />
       </div>
       <HeroCard />
-      <div className="mx-auto mb-12 max-w-44 transform rounded-full bg-hsa-green-100 pb-3 pt-2 text-center font-openSans text-2xl font-semibold text-white duration-300 hover:scale-110 hover:bg-green-900 hover:text-white hover:drop-shadow-lg">
-        <Link href="https://discord.gg/BMx92Z2bsY">Join us!</Link>
-      </div>
-      <div className="mb-5 max-w-full bg-hsa-yellow-100 p-4 shadow-md" />
+      <Button
+        label="Join Us!"
+        link="https://discord.gg/BMx92Z2bsY"
+        tab="_blank"
+      />
+      <div className="mt-10 max-w-full bg-hsa-yellow-100 p-4 shadow-md" />
     </div>
   );
 };

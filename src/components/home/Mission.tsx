@@ -9,7 +9,15 @@ const Mission = () => {
           Our Mission
           <div className="-ml-4 p-5 text-center font-openSans text-xl font-semibold text-hsa-gray-300 md:text-left">
             Here at HSA @UCR, our mission is to spread knowledge of our history
-            & culture, and to build a safe & uplifting Hmong community
+            and culture while fostering a strong, supportive, and uplifting
+            Hmong community. We strive to create a safe and welcoming space
+            where individuals can learn, connect, and celebrate our rich
+            heritage. Through cultural events, educational workshops, and
+            community outreach, we aim to empower our members with a deeper
+            understanding of Hmong traditions, language, and history. Our
+            organization is dedicated to promoting unity, inclusivity, and pride
+            in our identity while building lasting connections within the UCR
+            campus and beyond.
           </div>
         </div>
 
