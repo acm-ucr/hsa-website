@@ -1,4 +1,4 @@
-import { board } from "@/data/Board.js";
+import { board } from "@/data/Board.ts";
 import Board from "@/components/board/Board";
 
 const Boards = () => {

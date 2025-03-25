@@ -19,26 +19,22 @@ import image14 from "@/public/gallery/image14.webp";
 import image15 from "@/public/gallery/image15.webp";
 import * as motion from "motion/react-client";
 
-interface GalleryImg {
-  src: StaticImageData;
-}
-
-const images_gallery: GalleryImg[] = [
-  { src: image1 },
-  { src: image2 },
-  { src: image3 },
-  { src: image4 },
-  { src: image5 },
-  { src: image6 },
-  { src: image7 },
-  { src: image8 },
-  { src: image9 },
-  { src: image10 },
-  { src: image11 },
-  { src: image12 },
-  { src: image13 },
-  { src: image14 },
-  { src: image15 },
+const images_gallery: StaticImageData[] = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
 ];
 
 const fadeInFromBottom = {
@@ -59,7 +55,7 @@ const Photos = () => {
 
   return (
     <div className="m-1/10 grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
-      {images_gallery.map(({ src }, index) => (
+      {images_gallery.map((src, index) => (
         <motion.div
           key={index}
           className="overflow-hidden rounded-lg pl-1 pr-4 shadow-md"

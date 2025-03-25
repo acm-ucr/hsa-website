@@ -5,12 +5,12 @@ import Do from "@/components/home/Do";
 
 const Home = () => {
   return (
-    <div className="">
+    <>
       <Hero />
       <About />
       <Mission />
       <Do />
-    </div>
+    </>
   );
 };
 
