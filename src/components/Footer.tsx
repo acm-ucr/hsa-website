@@ -6,7 +6,7 @@ import footerImage from "@/public/assets/HSAlogo.svg";
 
 const Footer = () => {
   return (
-    <div className="justify-center">
+    <>
       <Border />
       <div className="flex items-center justify-between bg-hsa-gray-200 p-2">
         <Image
@@ -30,7 +30,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

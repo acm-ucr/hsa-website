@@ -9,14 +9,6 @@ const animationX = {
     x: 0,
   },
 };
-// const animationFade = {
-//   hidden: { opacity: 0, y: -100 },
-//   show: { opacity: 1, y: 0 },
-// };
-
-const transition = {
-  duration: 0.7,
-};
 
 const About = () => {
   return (
@@ -25,7 +17,7 @@ const About = () => {
         <motion.div
           className="flex w-[55%] flex-row items-center justify-center md:w-[30%] md:flex-col"
           variants={animationX}
-          transition={{ ...transition, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}

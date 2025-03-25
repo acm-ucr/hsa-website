@@ -44,18 +44,17 @@ const Navigation = () => {
 
         <div className="mr-[5%] flex items-center gap-[4vw] text-[3vw] sm:text-[2vw]">
           {tags.map(({ link, name }) => (
-            <div key={link}>
-              <Link
-                href={link}
-                className={`decoration-4 underline-offset-4 transition-all hover:underline ${
-                  pathName === link
-                    ? "underline"
-                    : "decoration-hsa-blue-200 hover:text-hsa-blue-200"
-                }`}
-              >
-                {name}
-              </Link>
-            </div>
+            <Link
+              key={link}
+              href={link}
+              className={`decoration-4 underline-offset-4 transition-all hover:underline ${
+                pathName === link
+                  ? "underline"
+                  : "decoration-hsa-blue-200 hover:text-hsa-blue-200"
+              }`}
+            >
+              {name}
+            </Link>
           ))}
         </div>
       </div>
@@ -65,23 +64,22 @@ const Navigation = () => {
         animate={isMobileMenuOpen ? "open" : "closed"}
         variants={variants}
         transition={{ duration: 0.2 }}
-        className={`absolute left-0 top-20 z-50 w-full bg-hsa-pink-200 px-6 py-10 text-2xl text-hsa-tan-100 shadow-lg md:hidden lg:hidden ${
+        className={`absolute left-0 top-20 z-50 flex w-full flex-col bg-hsa-pink-200 px-6 py-10 text-2xl text-hsa-tan-100 shadow-lg md:hidden lg:hidden ${
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
         {tags.map(({ link, name }) => (
-          <div key={link} className="py-2 text-center">
-            <Link
-              href={link}
-              className={`decoration-4 underline-offset-4 transition hover:underline ${
-                pathName === link
-                  ? "underline"
-                  : "decoration-hsa-blue-200 hover:text-hsa-blue-200"
-              }`}
-            >
-              {name}
-            </Link>
-          </div>
+          <Link
+            href={link}
+            key={link}
+            className={`py-2 text-center decoration-4 underline-offset-4 transition hover:underline ${
+              pathName === link
+                ? "underline"
+                : "decoration-hsa-blue-200 hover:text-hsa-blue-200"
+            }`}
+          >
+            {name}
+          </Link>
         ))}
       </motion.div>
 
