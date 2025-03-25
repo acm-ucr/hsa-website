@@ -1,69 +1,83 @@
 import Image from "next/image";
 import * as motion from "motion/react-client";
+import Button from "../Button";
 
 const animationX = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, x: -100 },
   show: {
     opacity: 1,
     x: 0,
   },
 };
-const transition = {
-  duration: 0.7,
-};
 
 const About = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center md:flex-row">
+      <div className="my-5 flex flex-col items-center justify-around md:flex-row">
         <motion.div
-          className="my-10 flex flex-col items-center text-center md:ml-12"
+          className="flex w-[55%] flex-row items-center justify-center md:w-[30%] md:flex-col"
           variants={animationX}
-          transition={{ ...transition, delay: 0.2 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="mb-6 items-center">
-            <Image
-              src="/assets/hsa6.svg"
-              width={320}
-              height={320}
-              alt="asset image"
-            />
-          </div>
+          <Image
+            src="/assets/hsa6.svg"
+            width={320}
+            height={320}
+            alt="asset image"
+            className="w-[50%] -rotate-90 md:w-[70%] md:rotate-0"
+          />
 
-          <div className="mb-6">
-            <Image
-              src="/hsaPeople.webp"
-              width={450}
-              height={280}
-              alt="hsa people image"
-            />
-          </div>
+          <Image
+            src="/hsaPeople.webp"
+            width={450}
+            height={280}
+            alt="hsa people image"
+            className="my-6 w-full"
+          />
 
-          <div className="rotate-180">
-            <Image
-              src="/assets/hsa6.svg"
-              width={320}
-              height={320}
-              alt="asset image"
-            />
-          </div>
+          <Image
+            src="/assets/hsa6.svg"
+            width={320}
+            height={320}
+            alt="asset image"
+            className="w-[50%] rotate-90 md:w-[70%] md:rotate-180"
+          />
         </motion.div>
-        <div className="my-5 flex w-full max-w-full flex-col justify-center px-4 text-center md:w-1/2 md:px-24 md:text-right">
-          <div className="font-songMyung text-5xl text-hsa-blue-100">
-            About Us
-          </div>
-          <p className="mt-4 flex font-openSans text-xl font-semibold text-hsa-gray-300">
-            HSA @ UCR is one of the few Hmong Student Associations in Southern
-            California. We strive to be a "home away from home" for all
-            students, whatever their background or identity.
+
+        <div className="items-right w-[80%] text-center md:w-[40%] md:text-right">
+          <p className="font-songMyung text-5xl text-hsa-blue-100">About Us</p>
+          <p className="text-md my-4 mb-6 font-openSans font-semibold text-hsa-gray-300 md:text-lg">
+            HSA @ UCR is dedicated to preserving Hmong culture and fostering a
+            welcoming, inclusive community. We strive to be a "home away from
+            home," providing a welcoming environment for individuals from all
+            backgrounds and identities.
+            <br /> <br />
+            We offer social events, cultural workshops, academic support, and
+            outreach to create meaningful connections and lifelong friendships.
+            Whether you're Hmong or simply interested in learning more, HSA @
+            UCR is a place to grow, engage, and celebrate diversity. Join us as
+            we continue to build a strong and vibrant community together!
           </p>
+          <div className="flex justify-end">
+            <Button
+              label="Join Us!"
+              link="https://discord.gg/BMx92Z2bsY"
+              target="_blank"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="h-10 bg-hsa-pink-200 shadow-md" />
+      <motion.div
+        className="mb-5 ml-auto h-10 max-w-full bg-hsa-pink-200 p-4 shadow-md"
+        initial={{ opacity: 0, width: 0 }}
+        whileInView={{ opacity: 1, width: "100%" }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
     </>
   );
 };
