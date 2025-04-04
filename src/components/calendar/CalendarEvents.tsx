@@ -19,6 +19,12 @@ import EventCard from "./EventCard";
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
   const today = new Date();
+  const timeMin = new Date(
+    today.getTime() - 60 * 60 * 24 * 7 * 5 * 1000,
+  ).toISOString();
+  const timeMax = new Date(
+    today.getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
+  ).toISOString();
   today.setHours(0, 0, 0, 0);
 
   const { isPending, data } = useQuery({
@@ -28,9 +34,9 @@ const Events = () => {
         await fetch(`https://www.googleapis.com/calendar/v3/calendars/${
           process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL
         }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}
-          &singleEvents=true&orderBy=startTime&timeMin=${new Date().toISOString()}&timeMax=${new Date(
-            new Date().getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
-          ).toISOString()}`).then((res) => res.json());
+          &orderBy=startTime&singleEvents=true&timeMin=${encodeURIComponent(
+            timeMin,
+          )}&timeMax=${encodeURIComponent(timeMax)}`).then((res) => res.json());
 
       const events = response.items.map(
         ({ start, end, location, description, summary }: GoogleEventProps) => ({
@@ -92,12 +98,12 @@ const Events = () => {
           </div>
         ) : (
           <>
-            {data ? (
+            {data && data.size > 0 ? (
               data
                 ?.slice(0, 2)
-                .map((event: EventProps) => (
+                .map((event: EventProps, index: number) => (
                   <EventCard
-                    key={event.start}
+                    key={index}
                     start={event.start}
                     end={event.end}
                     location={event.location}
@@ -117,7 +123,7 @@ const Events = () => {
         <Calendar
           mode="single"
           selected={new Date()}
-          className="w-full rounded-md border"
+          className="mx-auto w-full"
           events={data}
           setCurrent={setCurrent}
         />
