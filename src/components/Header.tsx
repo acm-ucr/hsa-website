@@ -32,7 +32,7 @@ const Header = ({ title }: HeaderProps) => {
       >
         <Image src={hsa5} alt="HSA5" className="relative top-1/3 w-2/3" />
       </motion.div>
-      <h1>hello i am eww </h1>
+      <h1>hello i am ann</h1>
       <motion.div
         className="flex flex-col justify-center"
         initial="hidden"
