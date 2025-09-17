@@ -39,16 +39,6 @@ const Boards = () => {
           />
         ))}
       </div>
-
-      <div className="mt-6 flex justify-center md:hidden">
-        <Board
-          key={4}
-          position={board[4].position}
-          name={board[4].name}
-          image={board[4].image}
-          badge={board[4].badge}
-        />
-      </div>
     </div>
   );
 };
